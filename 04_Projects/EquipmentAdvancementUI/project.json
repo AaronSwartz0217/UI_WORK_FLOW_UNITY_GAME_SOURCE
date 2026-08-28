@@ -1,0 +1,27 @@
+{
+  "projectDisplayName": "Equipment Advancement",
+  "projectId": "EquipmentAdvancementUI",
+  "componentPrefix": "EquipmentAdvancement",
+  "status": "final_components_pending_user_review",
+  "wireframe": "in/EquipmentAdvancementUI_Wireframe.jpeg",
+  "styleReferences": [
+    "in/StyleReference_01.jpg",
+    "in/SharedComponents_StyleBoard.png",
+    "in/SharedComponents/Shared_HelpButton_AmberQuestion_Reference_52x56.png",
+    "in/SharedComponents/Shared_CloseButton_RedX_Reference_52x56.png",
+    "in/SharedComponents/Shared_LongButton_DarkNormal_Reference_354x81.png",
+    "in/SharedComponents/Shared_LongButton_AmberHighlight_Reference_354x81.png",
+    "in/SharedComponents/Shared_SquareSlot_AmberCorners_Reference_94x90.png",
+    "in/SharedComponents/Shared_LargeSquarePanel_BlackSteel_Reference_227x227.png"
+  ],
+  "approvedFullUI": "FullUI/EquipmentAdvancementUI_FullUI_Review02.png",
+  "cleanMaster": "into/EquipmentAdvancementUI_NoOrdinaryText_Master_1078x1459.png",
+  "canvas": {"width": 1078, "height": 1459, "scaleX": 1.0, "scaleY": 1.0},
+  "formalOutput": "Components/out/EquipmentAdvancementUI",
+  "requiresFullUIApproval": true,
+  "fullUIApproved": true,
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}

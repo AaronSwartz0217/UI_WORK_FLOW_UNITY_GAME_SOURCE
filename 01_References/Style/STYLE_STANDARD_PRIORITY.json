@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "primary": {
+    "name": "Cook",
+    "path": "Standards/Primary_Cook",
+    "fileCount": 25,
+    "authority": [
+      "materials",
+      "palette",
+      "borderLanguage",
+      "bevels",
+      "wear",
+      "buttonStates",
+      "cards",
+      "quantityControls",
+      "slider"
+    ]
+  },
+  "secondary": {
+    "name": "Equipment Identification",
+    "path": "Standards/Secondary_EquipmentIdentification",
+    "fileCount": 15,
+    "authority": [
+      "helpButton",
+      "equipmentSlot",
+      "materialSlot",
+      "portraitTemplate",
+      "compactActionButton"
+    ],
+    "mustNotOverridePrimary": true,
+    "bakedTextIsReferenceOnly": true
+  },
+  "layoutAuthority": "current project wireframe",
+  "conflictWinner": "primary"
+}

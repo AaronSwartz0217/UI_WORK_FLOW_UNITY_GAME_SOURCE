@@ -1,0 +1,11 @@
+{
+  "projectDisplayName": "属性界面",
+  "projectId": "CharacterAttributesUI",
+  "componentPrefix": "CharacterAttributes",
+  "sourceWireframe": "Wireframe/CharacterAttributesUI_Wireframe.jpeg",
+  "primaryStyleFolder": "../../../01_References/Style/Standards/Primary_Cook",
+  "secondaryStyleFolder": "../../../01_References/Style/Standards/Secondary_EquipmentIdentification",
+  "textPolicy": "remove ordinary/localized text and dynamic numbers; retain functional symbols",
+  "priority": 1,
+  "status": "full_ui_generation"
+}

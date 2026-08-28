@@ -1,0 +1,10 @@
+{
+  "projectDisplayName": "装备进阶",
+  "projectId": "EquipmentAdvancementUI",
+  "componentPrefix": "EquipmentAdvancement",
+  "sourceWireframe": "Wireframe/EquipmentAdvancementUI_Wireframe.jpeg",
+  "styleReferenceFolder": "../../../01_References/Style",
+  "otherReferencesFolder": "OtherReferences",
+  "priority": 1,
+  "status": "queued"
+}

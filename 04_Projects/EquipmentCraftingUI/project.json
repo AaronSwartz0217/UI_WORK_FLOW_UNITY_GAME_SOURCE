@@ -1,0 +1,22 @@
+{
+  "projectDisplayName": "装备打造",
+  "projectId": "EquipmentCraftingUI",
+  "componentPrefix": "EquipmentCrafting",
+  "status": "needs_revision",
+  "migrationSource": "../../../EquipmentCraftingUI",
+  "layoutReference": "in/EquipmentCrafting_LayoutReference_800x1006.jpg",
+  "styleReferences": [
+    "in/EquipmentCrafting_StyleReference_1620x952.jpg"
+  ],
+  "formalOutput": "Components/out/EquipmentCraftingUI",
+  "formalPngCount": 26,
+  "validatorResult": "FAIL",
+  "validationErrors": [
+    "missing document: QA/COMPONENT_COORDINATES.md",
+    "missing document: QA/PROPORTION_LOOP_01.md"
+  ],
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}

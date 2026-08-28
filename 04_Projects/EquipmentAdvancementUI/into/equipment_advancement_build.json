@@ -1,0 +1,277 @@
+{
+  "manifest": [
+    {
+      "filename": "EquipmentAdvancement_MainPanelBase_Default_985x1384.png",
+      "component": "MainPanelBase",
+      "state": "Default",
+      "width": 985,
+      "height": 1384
+    },
+    {
+      "filename": "EquipmentAdvancement_TopEquipmentPanel_Empty_883x332.png",
+      "component": "TopEquipmentPanel",
+      "state": "Empty",
+      "width": 883,
+      "height": 332
+    },
+    {
+      "filename": "EquipmentAdvancement_QualityPanel_Empty_880x211.png",
+      "component": "QualityPanel",
+      "state": "Empty",
+      "width": 880,
+      "height": 211
+    },
+    {
+      "filename": "EquipmentAdvancement_EquipmentPairPanel_Empty_880x282.png",
+      "component": "EquipmentPairPanel",
+      "state": "Empty",
+      "width": 880,
+      "height": 282
+    },
+    {
+      "filename": "EquipmentAdvancement_ProgressActionPanel_Empty_880x307.png",
+      "component": "ProgressActionPanel",
+      "state": "Empty",
+      "width": 880,
+      "height": 307
+    },
+    {
+      "filename": "EquipmentAdvancement_LeftEquipmentRow_Empty_351x127.png",
+      "component": "LeftEquipmentRow",
+      "state": "Empty",
+      "width": 351,
+      "height": 127
+    },
+    {
+      "filename": "EquipmentAdvancement_RightEquipmentRow_Empty_355x127.png",
+      "component": "RightEquipmentRow",
+      "state": "Empty",
+      "width": 355,
+      "height": 127
+    },
+    {
+      "filename": "EquipmentAdvancement_TopEquipmentSlot_Default_158x165.png",
+      "component": "TopEquipmentSlot",
+      "state": "Default",
+      "width": 158,
+      "height": 165
+    },
+    {
+      "filename": "EquipmentAdvancement_LeftEquipmentSlot_Default_86x89.png",
+      "component": "LeftEquipmentSlot",
+      "state": "Default",
+      "width": 86,
+      "height": 89
+    },
+    {
+      "filename": "EquipmentAdvancement_RightEquipmentSlot_Default_86x89.png",
+      "component": "RightEquipmentSlot",
+      "state": "Default",
+      "width": 86,
+      "height": 89
+    },
+    {
+      "filename": "EquipmentAdvancement_QualityArrow_Default_56x47.png",
+      "component": "QualityArrow",
+      "state": "Default",
+      "width": 56,
+      "height": 47
+    },
+    {
+      "filename": "EquipmentAdvancement_ProgressTrack_Default_732x38.png",
+      "component": "ProgressTrack",
+      "state": "Default",
+      "width": 732,
+      "height": 38
+    },
+    {
+      "filename": "EquipmentAdvancement_ProgressFill_Default_143x38.png",
+      "component": "ProgressFill",
+      "state": "Default",
+      "width": 143,
+      "height": 38
+    },
+    {
+      "filename": "EquipmentAdvancement_HelpButton_Normal_69x65.png",
+      "component": "HelpButton",
+      "state": "Normal",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "filename": "EquipmentAdvancement_HelpButton_Hover_69x65.png",
+      "component": "HelpButton",
+      "state": "Hover",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "filename": "EquipmentAdvancement_HelpButton_Pressed_69x65.png",
+      "component": "HelpButton",
+      "state": "Pressed",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "filename": "EquipmentAdvancement_HelpButton_Disabled_69x65.png",
+      "component": "HelpButton",
+      "state": "Disabled",
+      "width": 69,
+      "height": 65
+    },
+    {
+      "filename": "EquipmentAdvancement_CloseButton_Normal_69x67.png",
+      "component": "CloseButton",
+      "state": "Normal",
+      "width": 69,
+      "height": 67
+    },
+    {
+      "filename": "EquipmentAdvancement_CloseButton_Hover_69x67.png",
+      "component": "CloseButton",
+      "state": "Hover",
+      "width": 69,
+      "height": 67
+    },
+    {
+      "filename": "EquipmentAdvancement_CloseButton_Pressed_69x67.png",
+      "component": "CloseButton",
+      "state": "Pressed",
+      "width": 69,
+      "height": 67
+    },
+    {
+      "filename": "EquipmentAdvancement_CloseButton_Disabled_69x67.png",
+      "component": "CloseButton",
+      "state": "Disabled",
+      "width": 69,
+      "height": 67
+    },
+    {
+      "filename": "EquipmentAdvancement_AdvanceButton_Normal_384x103.png",
+      "component": "AdvanceButton",
+      "state": "Normal",
+      "width": 384,
+      "height": 103
+    },
+    {
+      "filename": "EquipmentAdvancement_AdvanceButton_Hover_384x103.png",
+      "component": "AdvanceButton",
+      "state": "Hover",
+      "width": 384,
+      "height": 103
+    },
+    {
+      "filename": "EquipmentAdvancement_AdvanceButton_Pressed_384x103.png",
+      "component": "AdvanceButton",
+      "state": "Pressed",
+      "width": 384,
+      "height": 103
+    },
+    {
+      "filename": "EquipmentAdvancement_AdvanceButton_Disabled_384x103.png",
+      "component": "AdvanceButton",
+      "state": "Disabled",
+      "width": 384,
+      "height": 103
+    }
+  ],
+  "regions": {
+    "MainPanelBase": [
+      47,
+      43,
+      1032,
+      1427
+    ],
+    "TopEquipmentPanel": [
+      96,
+      168,
+      979,
+      500
+    ],
+    "QualityPanel": [
+      97,
+      529,
+      977,
+      740
+    ],
+    "EquipmentPairPanel": [
+      98,
+      774,
+      978,
+      1056
+    ],
+    "ProgressActionPanel": [
+      98,
+      1083,
+      978,
+      1390
+    ],
+    "TopEquipmentSlot": [
+      458,
+      218,
+      616,
+      383
+    ],
+    "LeftEquipmentRow": [
+      175,
+      849,
+      526,
+      976
+    ],
+    "RightEquipmentRow": [
+      553,
+      849,
+      908,
+      976
+    ],
+    "LeftEquipmentSlot": [
+      191,
+      867,
+      277,
+      956
+    ],
+    "RightEquipmentSlot": [
+      571,
+      867,
+      657,
+      956
+    ],
+    "QualityArrow": [
+      516,
+      608,
+      572,
+      655
+    ],
+    "ProgressTrack": [
+      174,
+      1117,
+      906,
+      1155
+    ],
+    "ProgressFill": [
+      174,
+      1117,
+      317,
+      1155
+    ],
+    "HelpButton": [
+      847,
+      76,
+      916,
+      141
+    ],
+    "CloseButton": [
+      936,
+      75,
+      1005,
+      142
+    ],
+    "AdvanceButton": [
+      345,
+      1244,
+      729,
+      1347
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+# Raster image sources and generated image assets
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.bmp
+*.tga
+*.tif
+*.tiff
+*.psd
+
+# Bundled deliverables may contain excluded image assets
+*.zip
+*.7z
+*.rar
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.log

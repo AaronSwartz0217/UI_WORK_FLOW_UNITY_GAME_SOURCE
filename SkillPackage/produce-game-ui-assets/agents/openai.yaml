@@ -1,0 +1,4 @@
+interface:
+  display_name: "游戏 UI 资源制作"
+  short_description: "按照白膜与风格参考生成、拆分并验收游戏 UI 正式资源"
+  default_prompt: "Use $produce-game-ui-assets to create and export a reviewed game UI project from the supplied wireframe and style references."

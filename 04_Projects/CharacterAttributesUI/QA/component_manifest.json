@@ -1,0 +1,72 @@
+{
+  "project": "CharacterAttributesUI",
+  "source": "../FullUI/CharacterAttributesUI_FullUI_Review02_1024x1536.png",
+  "selected_full_ui": "Review02",
+  "parent_child_policy": "MainPanelBase has all child regions texture-filled before export.",
+  "canonical_reuse": {
+    "CharacterAttributes_CloseButton": {
+      "source_family": "../../../01_References/Style/Standards/Primary_Cook/Cook_CloseButton_{State}_52x50.png",
+      "method": "verbatim copy with project-prefix rename",
+      "states": [
+        "Normal",
+        "Hover",
+        "Pressed",
+        "Disabled"
+      ]
+    }
+  },
+  "placement": {
+    "MainPanelBase": [
+      30,
+      97
+    ],
+    "TabButton": [
+      [
+        63,
+        126
+      ],
+      [
+        263,
+        126
+      ]
+    ],
+    "CloseButton_display": [
+      890,
+      128,
+      70,
+      67
+    ],
+    "ProgressTrack": [
+      [
+        81,
+        457
+      ],
+      [
+        81,
+        558
+      ]
+    ],
+    "ProgressFill": [
+      92,
+      572
+    ],
+    "AttributeRowShort_y": [
+      672,
+      756,
+      840,
+      923,
+      1007
+    ],
+    "AttributeRowLong_y": [
+      672,
+      756,
+      840,
+      923,
+      1007,
+      1090,
+      1174,
+      1257,
+      1341
+    ]
+  }
+}

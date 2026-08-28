@@ -1,0 +1,22 @@
+{
+  "projectDisplayName": "烹饪模式",
+  "projectId": "CookingModeUI",
+  "componentPrefix": "CookingMode",
+  "status": "needs_revision",
+  "migrationSource": "../../../CookingModeUI",
+  "layoutReference": "in/CookingMode_LayoutReference_1698x1133.jpg",
+  "styleReferences": [
+    "in/CookingMode_StyleReference_1620x952.jpg"
+  ],
+  "formalOutput": "Components/out/CookingModeUI",
+  "formalPngCount": 31,
+  "validatorResult": "FAIL",
+  "validationErrors": [
+    "missing document: QA/COMPONENT_COORDINATES.md",
+    "missing document: QA/PROPORTION_LOOP_01.md"
+  ],
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}

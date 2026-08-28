@@ -1,0 +1,247 @@
+{
+  "stage": "precision_cutout_candidate",
+  "formalPromotion": "blocked_until_visual_QA",
+  "source": "FullUI/CharacterAttributesUI_FullUI_Review02_1024x1536.png",
+  "alphaMethod": "component-specific closed-contour edge barrier, exterior flood fill, interior solidification, subpixel edge feather",
+  "lowAlphaCleanupThreshold": 6,
+  "componentCount": 19,
+  "coordinates": {
+    "MainPanelBase": {
+      "targetRegion": [
+        20,
+        85,
+        1004,
+        1475
+      ],
+      "visibleBounds": [
+        29,
+        96,
+        996,
+        1466
+      ],
+      "cropOffset": [
+        9,
+        11
+      ],
+      "reassembly": [
+        29,
+        96
+      ]
+    },
+    "NormalAttributesTabButton": {
+      "targetRegion": [
+        52,
+        114,
+        261,
+        210
+      ],
+      "visibleBounds": [
+        53,
+        115,
+        260,
+        209
+      ],
+      "cropOffset": [
+        1,
+        1
+      ],
+      "reassembly": [
+        53,
+        115
+      ],
+      "unionBounds": [
+        53,
+        115,
+        260,
+        209
+      ]
+    },
+    "VariantAttributesTabButton": {
+      "targetRegion": [
+        253,
+        114,
+        462,
+        210
+      ],
+      "visibleBounds": [
+        254,
+        115,
+        461,
+        199
+      ],
+      "cropOffset": [
+        1,
+        1
+      ],
+      "reassembly": [
+        254,
+        115
+      ],
+      "unionBounds": [
+        254,
+        115,
+        461,
+        199
+      ]
+    },
+    "ExperienceTrack": {
+      "targetRegion": [
+        70,
+        445,
+        954,
+        545
+      ],
+      "visibleBounds": [
+        81,
+        456,
+        944,
+        536
+      ],
+      "cropOffset": [
+        11,
+        11
+      ],
+      "reassembly": [
+        81,
+        456
+      ]
+    },
+    "SatietyTrack": {
+      "targetRegion": [
+        70,
+        548,
+        954,
+        648
+      ],
+      "visibleBounds": [
+        81,
+        557,
+        944,
+        637
+      ],
+      "cropOffset": [
+        11,
+        11
+      ],
+      "reassembly": [
+        81,
+        557
+      ]
+    },
+    "ExperienceFill": {
+      "targetRegion": [
+        84,
+        563,
+        625,
+        631
+      ],
+      "visibleBounds": [
+        88,
+        565,
+        623,
+        626
+      ],
+      "cropOffset": [
+        4,
+        2
+      ],
+      "reassembly": [
+        88,
+        565
+      ]
+    },
+    "SatietyFill": {
+      "targetRegion": [
+        84,
+        563,
+        625,
+        631
+      ],
+      "visibleBounds": [
+        88,
+        565,
+        623,
+        626
+      ],
+      "cropOffset": [
+        4,
+        2
+      ],
+      "reassembly": [
+        88,
+        565
+      ]
+    },
+    "AttributeRowShort": {
+      "targetRegion": [
+        70,
+        660,
+        477,
+        760
+      ],
+      "visibleBounds": [
+        81,
+        671,
+        463,
+        749
+      ],
+      "cropOffset": [
+        11,
+        11
+      ],
+      "reassembly": [
+        81,
+        671
+      ]
+    },
+    "AttributeRowLong": {
+      "targetRegion": [
+        483,
+        660,
+        955,
+        760
+      ],
+      "visibleBounds": [
+        494,
+        671,
+        944,
+        748
+      ],
+      "cropOffset": [
+        11,
+        11
+      ],
+      "reassembly": [
+        494,
+        671
+      ]
+    },
+    "CloseButton": {
+      "targetRegion": [
+        890,
+        128,
+        960,
+        195
+      ],
+      "visibleBounds": [
+        0,
+        0,
+        52,
+        50
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        899,
+        136
+      ],
+      "displaySize": [
+        62,
+        60
+      ],
+      "source": "Cook_CloseButton_{State}_52x50.png"
+    }
+  }
+}
