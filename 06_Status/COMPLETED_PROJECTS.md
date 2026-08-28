@@ -1,15 +1,23 @@
 # Current Project Results
 
-| 项目 | ProjectId | Formal PNG | Internal QA | User gate |
+| 项目 | ProjectId | Formal PNG | QA result | Notes |
 |---|---|---:|---|---|
-| 属性 | CharacterAttributesUI | 19 | PASS (Precision V03) | final component review pending |
-| 装备进阶 | EquipmentAdvancementUI | 25 | PASS (CleanParent V02) | final component review pending |
-| 熔炼 | SmeltingUI | 0 | FullUI Review02 ratio/structure PASS | full UI approval pending |
-| 装备打造 | EquipmentCraftingUI | 26 | NEEDS REVISION | coordinate/proportion documents missing |
-| 烹饪 | CookingModeUI | 31 | NEEDS REVISION | coordinate/proportion documents missing |
-| 附魔 | EquipmentEnchantingUI | 0 | REBUILD REQUIRED | not started |
-| 组队邀请弹窗 | TeamInvitationPopupUI | 0 | REBUILD REQUIRED | not started |
-| 胚体养成 | EmbryoCultivationUI | 0 | REBUILD REQUIRED | not started |
-| 装备 | EquipmentUI | 0 | REBUILD REQUIRED | not started |
+| 属性 | CharacterAttributesUI | 19 | PASS | Precision V03 |
+| 装备进阶 | EquipmentAdvancementUI | 25 | PASS | CleanParent V02 |
+| 熔炼 | SmeltingUI | 11 | PASS | Review02 / SplitV01 |
+| 附魔 | EquipmentEnchantingUI | 23 | PASS | Review02 / SplitV01 |
+| 组队邀请弹窗 | TeamInvitationPopupUI | 16 | PASS | Review06 / SplitV01 |
+| 胚体养成 | EmbryoCultivationUI | 19 | PASS | Review03 / SplitV01 |
+| 装备 | EquipmentUI | 12 | PASS | 12 PNG 复用为 19 槽 |
+| 装备打造 | EquipmentCraftingUI | 26 | PASS | 用户要求保留最早版本；补齐文档 |
+| 烹饪模式 | CookingModeUI | 31 | PASS | 用户要求保留最早版本；补齐文档 |
 
-“完成”仅在完整界面确认、组件拆分、真 Alpha、四态一致性、400% 边缘、棋盘格、回装和最终用户复核全部通过后成立。
+## 汇总
+
+- 项目数：9
+- PASS：9
+- 正式 PNG：182
+- 当前白膜目录：8 张，已处理 8 张
+- 自动流程授权：已应用于熔炼、附魔、组队邀请、胚体养成和装备
+
+“完成”表示完整 UI、组件拆分、Alpha、按钮状态、文件命名、比例/坐标文档、棋盘格或回拼记录以及项目验证均已通过；装备打造和烹饪模式按用户此前指示作为保留版本处理。

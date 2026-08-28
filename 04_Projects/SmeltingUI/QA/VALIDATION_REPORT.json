@@ -1,0 +1,15 @@
+{
+  "projectId": "SmeltingUI",
+  "splitVersion": "SplitV01",
+  "formalPngCount": 11,
+  "projectValidator": "PASS",
+  "alphaAudit": "PASS",
+  "lowAlphaResidue1To5": 0,
+  "buttonSafeInterior": "PASS",
+  "stateCanvasAndSilhouette": "PASS",
+  "reassembly100Percent": "PASS",
+  "edgeReview400Percent": "PASS",
+  "checkerboard": "PASS",
+  "parentChildResidue": "PASS",
+  "overall": "PASS"
+}

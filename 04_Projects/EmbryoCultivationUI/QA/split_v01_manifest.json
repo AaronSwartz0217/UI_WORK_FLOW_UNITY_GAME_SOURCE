@@ -1,0 +1,164 @@
+{
+  "projectId": "EmbryoCultivationUI",
+  "splitVersion": "SplitV01",
+  "candidateCount": 19,
+  "source": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\EmbryoCultivationUI\\FullUI\\EmbryoCultivationUI_FullUI_Review03_1024x1536.png",
+  "sourceBounds": {
+    "MainPanelBase": [
+      41,
+      72,
+      984,
+      1434
+    ],
+    "HeaderPanel": [
+      74,
+      96,
+      951,
+      220
+    ],
+    "TabButtonLeft": [
+      140,
+      241,
+      501,
+      334
+    ],
+    "TabButtonRight": [
+      527,
+      241,
+      361,
+      93
+    ],
+    "ContentPanel": [
+      88,
+      338,
+      939,
+      1260
+    ],
+    "EmbryoSlot": [
+      407,
+      416,
+      617,
+      635
+    ],
+    "MaterialCardLeft": [
+      108,
+      1087,
+      492,
+      1224
+    ],
+    "MaterialCardRight": [
+      533,
+      1087,
+      384,
+      137
+    ],
+    "MaterialSlotLeft": [
+      127,
+      1104,
+      223,
+      1204
+    ],
+    "MaterialSlotRight": [
+      552,
+      1104,
+      96,
+      100
+    ],
+    "ActionPanel": [
+      88,
+      1265,
+      940,
+      1410
+    ],
+    "CultivateButton": [
+      285,
+      1284,
+      742,
+      1399
+    ],
+    "CloseButtonDisplay": [
+      856,
+      121,
+      72,
+      67
+    ]
+  },
+  "files": [
+    {
+      "name": "EmbryoCultivation_ActionPanel_Empty_852x145.png",
+      "sha256": "785c523c2ad6a87c50b5c970ee112105dc20fae36b48a12d4d218b7bb6d6369b"
+    },
+    {
+      "name": "EmbryoCultivation_CloseButton_Disabled_52x50.png",
+      "sha256": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3"
+    },
+    {
+      "name": "EmbryoCultivation_CloseButton_Hover_52x50.png",
+      "sha256": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec"
+    },
+    {
+      "name": "EmbryoCultivation_CloseButton_Normal_52x50.png",
+      "sha256": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d"
+    },
+    {
+      "name": "EmbryoCultivation_CloseButton_Pressed_52x50.png",
+      "sha256": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65"
+    },
+    {
+      "name": "EmbryoCultivation_ContentPanel_Empty_851x922.png",
+      "sha256": "8d74dc035b7a69dee97274fbc2569008e558e51c4aa4d5851233ebe9d69add59"
+    },
+    {
+      "name": "EmbryoCultivation_CultivateButton_Disabled_457x115.png",
+      "sha256": "dc6dc57f2e5dfd46d196315e5afc735aef81427c51088d287a4f7bb504c2d24d"
+    },
+    {
+      "name": "EmbryoCultivation_CultivateButton_Hover_457x115.png",
+      "sha256": "916fa6f23831d65c011bd699057623a7faf195f2c1334168324b257cd59d54bf"
+    },
+    {
+      "name": "EmbryoCultivation_CultivateButton_Normal_457x115.png",
+      "sha256": "8a5ace87b0d289e3a9b96817c87e2e83ff49faa81caefb34401f1a41b40bb2f1"
+    },
+    {
+      "name": "EmbryoCultivation_CultivateButton_Pressed_457x115.png",
+      "sha256": "3417a2ec10a622a476fc86dfedbfd13ddf5910d5fdba199f7b8588dfc9d26235"
+    },
+    {
+      "name": "EmbryoCultivation_EmbryoSlot_Empty_210x219.png",
+      "sha256": "0011f708e4a7b1fed55d15eb1dfa8bbe719b5c57ac04ec9ff5c1dff7e0366196"
+    },
+    {
+      "name": "EmbryoCultivation_HeaderPanel_Empty_877x124.png",
+      "sha256": "2fc2ebd8f7fb3f2a2f5d4ff31e0e4f9d2b8ad3a7b7c000e6d115a9f87fca87ea"
+    },
+    {
+      "name": "EmbryoCultivation_MainPanelBase_Empty_943x1362.png",
+      "sha256": "d536c193ebdd2bc675cf8f9a37ddb1651d95a70962dd6a150a6c9b4e8bdb37af"
+    },
+    {
+      "name": "EmbryoCultivation_MaterialCard_Empty_384x137.png",
+      "sha256": "6e7041e206b8fbb909be149cb723de93127b37008a01f765194e32d7daeec5e6"
+    },
+    {
+      "name": "EmbryoCultivation_MaterialSlot_Empty_96x100.png",
+      "sha256": "c027f9548acb4c72bd3b625f7dc1fcc043dc7a2a1abf80a103fefa0ae2577818"
+    },
+    {
+      "name": "EmbryoCultivation_TabButton_Disabled_361x93.png",
+      "sha256": "326a8a77ca864e9a07149143f328ebc772850cda774a1bc5a37e30aaf3ef7cba"
+    },
+    {
+      "name": "EmbryoCultivation_TabButton_Hover_361x93.png",
+      "sha256": "6c5684c35d18335d467e39f94e545bd530d03bcff90d3778b6e34fb47033d0a7"
+    },
+    {
+      "name": "EmbryoCultivation_TabButton_Normal_361x93.png",
+      "sha256": "3d92020f38faba2bfc3e7dc8674d5d87717b904a5b55041671103b2beb3314cd"
+    },
+    {
+      "name": "EmbryoCultivation_TabButton_Pressed_361x93.png",
+      "sha256": "6118e71258c8bb73453aab56a832c607b5b804eb97dfbdb12b3bd191e6e35f17"
+    }
+  ]
+}

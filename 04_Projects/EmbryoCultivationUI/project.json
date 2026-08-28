@@ -1,0 +1,23 @@
+{
+  "projectDisplayName": "胚体养成",
+  "projectId": "EmbryoCultivationUI",
+  "componentPrefix": "EmbryoCultivation",
+  "status": "complete_automated_user_authorized",
+  "wireframe": "in/EmbryoCultivationUI_Wireframe.jpeg",
+  "wireframeCanvas": {"width": 585, "height": 809},
+  "wireframePanelBounds": {"x": 34, "y": 41, "width": 504, "height": 729, "ratio": 0.691358},
+  "styleReferences": ["in/StylePrimary_Cook", "in/StyleSecondary_EquipmentIdentification", "in/SharedComponents_StyleBoard.png"],
+  "currentFullUI": "FullUI/EmbryoCultivationUI_FullUI_Review03_1024x1536.png",
+  "canvas": {"width": 1024, "height": 1536, "scaleX": 1.0, "scaleY": 1.0},
+  "generatedPanelBounds": {"x": 41, "y": 72, "width": 943, "height": 1362, "ratio": 0.692364, "ratioDeviationPercent": 0.146},
+  "formalOutput": "Components/out/EmbryoCultivationUI",
+  "formalPngCount": 19,
+  "splitVersion": "SplitV01",
+  "validatorResult": "PASS",
+  "approvalBasis": "User explicitly authorized full automatic continuation without per-project approval gates.",
+  "requiresFullUIApproval": false,
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}

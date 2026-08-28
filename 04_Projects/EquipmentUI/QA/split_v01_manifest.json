@@ -1,0 +1,210 @@
+{
+  "projectId": "EquipmentUI",
+  "splitVersion": "SplitV01",
+  "candidateCount": 12,
+  "source": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\EquipmentUI\\FullUI\\EquipmentUI_FullUI_Review03_1024x1536.png",
+  "sourceBounds": {
+    "MainPanelBase": [
+      17,
+      111,
+      1005,
+      1504
+    ],
+    "EquipmentContentPanel": [
+      55,
+      238,
+      968,
+      1468
+    ],
+    "TabButtonLeft": [
+      67,
+      157,
+      253,
+      225
+    ],
+    "TabButtonRight": [
+      264,
+      157,
+      186,
+      68
+    ],
+    "WeaponSlot": [
+      402,
+      688,
+      220,
+      220
+    ],
+    "EquipmentSlotSource": [
+      76,
+      768,
+      219,
+      914
+    ],
+    "EquipmentSlotPositions": [
+      [
+        76,
+        768,
+        143,
+        143
+      ],
+      [
+        803,
+        768,
+        143,
+        143
+      ],
+      [
+        70,
+        944,
+        143,
+        143
+      ],
+      [
+        219,
+        944,
+        143,
+        143
+      ],
+      [
+        661,
+        944,
+        143,
+        143
+      ],
+      [
+        812,
+        944,
+        143,
+        143
+      ],
+      [
+        70,
+        1115,
+        143,
+        143
+      ],
+      [
+        219,
+        1115,
+        143,
+        143
+      ],
+      [
+        369,
+        1115,
+        143,
+        143
+      ],
+      [
+        518,
+        1115,
+        143,
+        143
+      ],
+      [
+        664,
+        1115,
+        143,
+        143
+      ],
+      [
+        813,
+        1115,
+        143,
+        143
+      ],
+      [
+        70,
+        1288,
+        143,
+        143
+      ],
+      [
+        219,
+        1288,
+        143,
+        143
+      ],
+      [
+        369,
+        1288,
+        143,
+        143
+      ],
+      [
+        518,
+        1288,
+        143,
+        143
+      ],
+      [
+        664,
+        1288,
+        143,
+        143
+      ],
+      [
+        813,
+        1288,
+        143,
+        143
+      ]
+    ],
+    "CloseButtonDisplay": [
+      898,
+      160,
+      62,
+      60
+    ]
+  },
+  "files": [
+    {
+      "name": "Equipment_CloseButton_Disabled_52x50.png",
+      "sha256": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3"
+    },
+    {
+      "name": "Equipment_CloseButton_Hover_52x50.png",
+      "sha256": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec"
+    },
+    {
+      "name": "Equipment_CloseButton_Normal_52x50.png",
+      "sha256": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d"
+    },
+    {
+      "name": "Equipment_CloseButton_Pressed_52x50.png",
+      "sha256": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65"
+    },
+    {
+      "name": "Equipment_EquipmentContentPanel_Empty_913x1230.png",
+      "sha256": "623d305ccf25e5e1716f0a94e8159011dab74ddd2eebeb8f35cfbac794b1031a"
+    },
+    {
+      "name": "Equipment_EquipmentSlot_Empty_143x143.png",
+      "sha256": "d3c28891c2bcd185771181af3725ea6370d116abee2b9fe6548abf9e8569041b"
+    },
+    {
+      "name": "Equipment_MainPanelBase_Empty_988x1393.png",
+      "sha256": "7497726cca1b98f082b9fb4b8efa299793df90ed9a6155af8f39e6fc3aacae98"
+    },
+    {
+      "name": "Equipment_TabButton_Disabled_186x68.png",
+      "sha256": "5305037265cff092b5766084f7dd30481d7e959d585c8ba92f81c140a8e93801"
+    },
+    {
+      "name": "Equipment_TabButton_Hover_186x68.png",
+      "sha256": "c7f3da014452959076cc41316dd291e87e4e57740c78052597b5489f8f1a3a7e"
+    },
+    {
+      "name": "Equipment_TabButton_Normal_186x68.png",
+      "sha256": "31bdd8b54ad5b54b36bf559545a798b4667dfd5d288e59c6bee6cd01d1486c06"
+    },
+    {
+      "name": "Equipment_TabButton_Pressed_186x68.png",
+      "sha256": "b56b270ea3023e3b52b634fee9e0765ab441de401df2ede9445967c4df6b79e2"
+    },
+    {
+      "name": "Equipment_WeaponSlot_Empty_220x220.png",
+      "sha256": "4a85ca5384714b972ade28872f34f23e0a5ef41bd6dc4e286dfb1587ac017c5b"
+    }
+  ]
+}

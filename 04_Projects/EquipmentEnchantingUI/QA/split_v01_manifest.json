@@ -1,0 +1,405 @@
+{
+  "version": "SplitV01",
+  "panelSelectionMode": "AllDetected",
+  "source": "FullUI/EquipmentEnchantingUI_FullUI_Review02_1024x1536.png",
+  "formalAutomationAuthorized": true,
+  "candidateCount": 23,
+  "coordinates": {
+    "MainPanelBase": {
+      "targetRegion": [
+        27,
+        100,
+        996,
+        1477
+      ],
+      "visibleBounds": [
+        27,
+        100,
+        996,
+        1477
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        27,
+        100
+      ]
+    },
+    "EquipmentDisplayPanel": {
+      "targetRegion": [
+        58,
+        203,
+        965,
+        459
+      ],
+      "visibleBounds": [
+        58,
+        203,
+        965,
+        459
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        58,
+        203
+      ]
+    },
+    "EquipmentSlot": {
+      "targetRegion": [
+        412,
+        241,
+        601,
+        429
+      ],
+      "visibleBounds": [
+        412,
+        241,
+        601,
+        429
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        412,
+        241
+      ]
+    },
+    "AttributeListPanel": {
+      "targetRegion": [
+        58,
+        473,
+        965,
+        985
+      ],
+      "visibleBounds": [
+        58,
+        473,
+        965,
+        985
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        58,
+        473
+      ]
+    },
+    "AttributeRow": {
+      "targetRegion": [
+        131,
+        501,
+        886,
+        585
+      ],
+      "visibleBounds": [
+        131,
+        501,
+        886,
+        585
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        [
+          131,
+          501
+        ],
+        [
+          131,
+          595
+        ],
+        [
+          131,
+          688
+        ],
+        [
+          131,
+          782
+        ],
+        [
+          131,
+          876
+        ]
+      ]
+    },
+    "AttributeToggleSlot": {
+      "targetRegion": [
+        795,
+        513,
+        859,
+        577
+      ],
+      "visibleBounds": [
+        795,
+        513,
+        859,
+        577
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        [
+          795,
+          513
+        ],
+        [
+          795,
+          607
+        ],
+        [
+          795,
+          701
+        ],
+        [
+          795,
+          795
+        ],
+        [
+          795,
+          889
+        ]
+      ]
+    },
+    "MaterialPanel": {
+      "targetRegion": [
+        58,
+        998,
+        965,
+        1219
+      ],
+      "visibleBounds": [
+        58,
+        998,
+        965,
+        1219
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        58,
+        998
+      ]
+    },
+    "MaterialCard": {
+      "targetRegion": [
+        522,
+        1033,
+        924,
+        1187
+      ],
+      "visibleBounds": [
+        522,
+        1033,
+        924,
+        1187
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        [
+          99,
+          1033
+        ],
+        [
+          522,
+          1033
+        ]
+      ]
+    },
+    "MaterialSlot": {
+      "targetRegion": [
+        540,
+        1053,
+        656,
+        1169
+      ],
+      "visibleBounds": [
+        540,
+        1053,
+        656,
+        1169
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        [
+          116,
+          1053
+        ],
+        [
+          540,
+          1053
+        ]
+      ]
+    },
+    "ControlPanel": {
+      "targetRegion": [
+        58,
+        1233,
+        965,
+        1452
+      ],
+      "visibleBounds": [
+        58,
+        1233,
+        965,
+        1452
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        58,
+        1233
+      ]
+    },
+    "EnchantButton": {
+      "targetRegion": [
+        331,
+        1266,
+        690,
+        1353
+      ],
+      "visibleBounds": [
+        331,
+        1266,
+        690,
+        1353
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        331,
+        1266
+      ],
+      "unionBounds": [
+        331,
+        1266,
+        690,
+        1353
+      ]
+    },
+    "ModeCheckbox": {
+      "targetRegion": [
+        463,
+        1369,
+        518,
+        1425
+      ],
+      "visibleBounds": [
+        463,
+        1369,
+        518,
+        1425
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        463,
+        1369
+      ]
+    },
+    "HelpButton": {
+      "targetRegion": [
+        820,
+        122,
+        885,
+        190
+      ],
+      "visibleBounds": [
+        0,
+        0,
+        52,
+        56
+      ],
+      "unionBounds": [
+        0,
+        0,
+        52,
+        56
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        823,
+        126
+      ],
+      "displaySize": [
+        58,
+        62
+      ]
+    },
+    "CloseButton": {
+      "targetRegion": [
+        889,
+        122,
+        955,
+        190
+      ],
+      "visibleBounds": [
+        0,
+        0,
+        52,
+        50
+      ],
+      "unionBounds": [
+        0,
+        0,
+        52,
+        50
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        892,
+        128
+      ],
+      "displaySize": [
+        58,
+        56
+      ]
+    }
+  },
+  "canonicalHashParity": {
+    "HelpButton": {
+      "Normal": true,
+      "Hover": true,
+      "Pressed": true,
+      "Disabled": true
+    },
+    "CloseButton": {
+      "Normal": true,
+      "Hover": true,
+      "Pressed": true,
+      "Disabled": true
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "projectId": "TeamInvitationPopupUI",
+  "source": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\TeamInvitationPopupUI\\FullUI\\TeamInvitationPopupUI_FullUI_Review06_1536x1024.png",
+  "splitVersion": "SplitV01",
+  "candidateCount": 16,
+  "sourceBounds": {
+    "MainPanelBase": [
+      134,
+      44,
+      1400,
+      965
+    ],
+    "HeaderPanel": [
+      156,
+      72,
+      1376,
+      179
+    ],
+    "InvitationListPanel": [
+      157,
+      185,
+      1376,
+      942
+    ],
+    "InvitationRow": [
+      188,
+      214,
+      1349,
+      315
+    ],
+    "AcceptButton": [
+      968,
+      223,
+      1140,
+      300
+    ],
+    "RejectButton": [
+      1164,
+      223,
+      1328,
+      300
+    ],
+    "CloseButtonDisplay": [
+      1298,
+      87,
+      62,
+      60
+    ]
+  },
+  "files": [
+    {
+      "name": "TeamInvitation_AcceptButton_Disabled_172x77.png",
+      "sha256": "0c1a494cc62038d6ed8f0307d46abfeed0536c1bb0199125305df1632309802a"
+    },
+    {
+      "name": "TeamInvitation_AcceptButton_Hover_172x77.png",
+      "sha256": "d0fb79f45cd87e0f008218c31b7f0a88427056ebf0c9fdf8bcc2278118d39fe9"
+    },
+    {
+      "name": "TeamInvitation_AcceptButton_Normal_172x77.png",
+      "sha256": "4ae99f5d8d49b8ef2f4573426a81a813e46103f0c7a419ccbb1b573e7fa9cd42"
+    },
+    {
+      "name": "TeamInvitation_AcceptButton_Pressed_172x77.png",
+      "sha256": "fba681cc7760386e93d85e490336ae8d3e159059e282784f7e59152c78f0f108"
+    },
+    {
+      "name": "TeamInvitation_CloseButton_Disabled_52x50.png",
+      "sha256": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3"
+    },
+    {
+      "name": "TeamInvitation_CloseButton_Hover_52x50.png",
+      "sha256": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec"
+    },
+    {
+      "name": "TeamInvitation_CloseButton_Normal_52x50.png",
+      "sha256": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d"
+    },
+    {
+      "name": "TeamInvitation_CloseButton_Pressed_52x50.png",
+      "sha256": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65"
+    },
+    {
+      "name": "TeamInvitation_HeaderPanel_Empty_1220x107.png",
+      "sha256": "62dc82190cd9c9e940cbdb7c9b152fd983f652091faf078723d552a4942c82af"
+    },
+    {
+      "name": "TeamInvitation_InvitationListPanel_Empty_1219x757.png",
+      "sha256": "2f59e3c1310ccbee0672db3b991e4cbfa51ab936e2b20f8179b5d5e3314b0707"
+    },
+    {
+      "name": "TeamInvitation_InvitationRow_Empty_1161x101.png",
+      "sha256": "3723da21608ed523f95f1d1703f5296ba92a41e1044168fe68bca267c2b603be"
+    },
+    {
+      "name": "TeamInvitation_MainPanelBase_Empty_1266x921.png",
+      "sha256": "2e467affdc99c6020412472040cae16a9065a876ac7212f70e1171d7156336ae"
+    },
+    {
+      "name": "TeamInvitation_RejectButton_Disabled_164x77.png",
+      "sha256": "5f32c97fc79253b6d3535a1e4b31fd4fe946537a970e42d12a104d1349bf0723"
+    },
+    {
+      "name": "TeamInvitation_RejectButton_Hover_164x77.png",
+      "sha256": "5e6910e001caf2871ffb27c75ff504c8cc7bbf781bb955f2d1e9aa5b1ddbeda3"
+    },
+    {
+      "name": "TeamInvitation_RejectButton_Normal_164x77.png",
+      "sha256": "14a205c4008768ffe479f22f3ac625b4da9e32c027f6772e30b65019282b5fa4"
+    },
+    {
+      "name": "TeamInvitation_RejectButton_Pressed_164x77.png",
+      "sha256": "e9216655def0a07729fa62c64706a75e8b9ef8bc9af0eaa125d2d3f4e48d228e"
+    }
+  ]
+}

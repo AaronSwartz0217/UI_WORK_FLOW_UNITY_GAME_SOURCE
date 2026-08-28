@@ -1,0 +1,27 @@
+{
+  "projectDisplayName": "组队邀请弹窗",
+  "projectId": "TeamInvitationPopupUI",
+  "componentPrefix": "TeamInvitation",
+  "status": "complete_automated_user_authorized",
+  "wireframe": "in/TeamInvitationPopupUI_Wireframe.jpeg",
+  "wireframeCanvas": {"width": 1012, "height": 760},
+  "wireframePanelBounds": {"x": 86, "y": 57, "width": 826, "height": 611, "ratio": 1.351882},
+  "styleReferences": [
+    "in/StylePrimary_Cook",
+    "in/StyleSecondary_EquipmentIdentification",
+    "in/SharedComponents_StyleBoard.png"
+  ],
+  "currentFullUI": "FullUI/TeamInvitationPopupUI_FullUI_Review06_1536x1024.png",
+  "canvas": {"width": 1536, "height": 1024, "scaleX": 1.0, "scaleY": 1.0},
+  "generatedPanelBounds": {"x": 134, "y": 44, "width": 1266, "height": 921, "ratio": 1.374593, "ratioDeviationPercent": 1.680},
+  "formalOutput": "Components/out/TeamInvitationPopupUI",
+  "formalPngCount": 16,
+  "splitVersion": "SplitV01",
+  "validatorResult": "PASS",
+  "approvalBasis": "User explicitly authorized full automatic continuation without per-project approval gates.",
+  "requiresFullUIApproval": false,
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}

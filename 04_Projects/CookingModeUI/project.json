@@ -2,19 +2,15 @@
   "projectDisplayName": "烹饪模式",
   "projectId": "CookingModeUI",
   "componentPrefix": "CookingMode",
-  "status": "needs_revision",
+  "status": "complete_legacy_user_retained",
   "migrationSource": "../../../CookingModeUI",
   "layoutReference": "in/CookingMode_LayoutReference_1698x1133.jpg",
-  "styleReferences": [
-    "in/CookingMode_StyleReference_1620x952.jpg"
-  ],
+  "styleReferences": ["in/CookingMode_StyleReference_1620x952.jpg"],
   "formalOutput": "Components/out/CookingModeUI",
   "formalPngCount": 31,
-  "validatorResult": "FAIL",
-  "validationErrors": [
-    "missing document: QA/COMPONENT_COORDINATES.md",
-    "missing document: QA/PROPORTION_LOOP_01.md"
-  ],
+  "validatorResult": "PASS",
+  "validationErrors": [],
+  "approvalBasis": "User explicitly requested that the two earliest completed UIs be retained; documentation repaired without changing image assets.",
   "requiresFourButtonStates": true,
   "requiresTrueAlpha": true,
   "requiresReassembly": true,

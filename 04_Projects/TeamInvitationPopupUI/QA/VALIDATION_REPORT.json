@@ -1,0 +1,17 @@
+{
+  "projectId": "TeamInvitationPopupUI",
+  "splitVersion": "SplitV01",
+  "status": "PASS",
+  "formalPngCount": 16,
+  "checks": {
+    "filenameAndDimensions": "PASS",
+    "transparentCorners": "PASS",
+    "buttonSafeCenterAlpha255": "PASS",
+    "fourStateCompleteness": "PASS",
+    "stateCanvasAndAlphaConsistency": "PASS",
+    "parentChildSeparation": "PASS",
+    "textureSeamInspection": "PASS",
+    "checkerboard": "PASS",
+    "reassembly": "PASS"
+  }
+}

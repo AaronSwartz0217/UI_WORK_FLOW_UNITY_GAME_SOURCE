@@ -1,8 +1,8 @@
 {
-  "projectDisplayName": "Equipment Advancement",
+  "projectDisplayName": "装备进阶",
   "projectId": "EquipmentAdvancementUI",
   "componentPrefix": "EquipmentAdvancement",
-  "status": "final_components_pending_user_review",
+  "status": "complete_automated_user_authorized",
   "wireframe": "in/EquipmentAdvancementUI_Wireframe.jpeg",
   "styleReferences": [
     "in/StyleReference_01.jpg",
@@ -21,10 +21,11 @@
   "formalPngCount": 25,
   "cleanParentVersion": "V02",
   "validatorResult": "PASS",
-  "requiresFullUIApproval": true,
+  "requiresFullUIApproval": false,
   "fullUIApproved": true,
   "requiresFourButtonStates": true,
   "requiresTrueAlpha": true,
   "requiresReassembly": true,
-  "requiresFinalQA": true
+  "requiresFinalQA": true,
+  "approvalBasis": "User explicitly authorized full automatic continuation without per-project approval gates."
 }

@@ -1,0 +1,216 @@
+{
+  "version": "SplitV01",
+  "panelSelectionMode": "AllDetected",
+  "source": "FullUI/SmeltingUI_FullUI_Review02_1024x1536.png",
+  "formalAutomationAuthorized": true,
+  "candidateCount": 11,
+  "coordinates": {
+    "MainPanelBase": {
+      "targetRegion": [
+        34,
+        72,
+        985,
+        1471
+      ],
+      "visibleBounds": [
+        34,
+        72,
+        985,
+        1471
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        34,
+        72
+      ]
+    },
+    "MaterialSlot": {
+      "targetRegion": [
+        205,
+        226,
+        338,
+        363
+      ],
+      "visibleBounds": [
+        205,
+        226,
+        338,
+        363
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        [
+          205,
+          226
+        ],
+        [
+          365,
+          226
+        ],
+        [
+          524,
+          226
+        ],
+        [
+          684,
+          226
+        ],
+        [
+          205,
+          394
+        ],
+        [
+          365,
+          394
+        ],
+        [
+          524,
+          394
+        ],
+        [
+          684,
+          394
+        ],
+        [
+          205,
+          561
+        ],
+        [
+          365,
+          561
+        ],
+        [
+          524,
+          561
+        ],
+        [
+          684,
+          561
+        ],
+        [
+          205,
+          729
+        ],
+        [
+          365,
+          729
+        ],
+        [
+          524,
+          729
+        ],
+        [
+          684,
+          729
+        ]
+      ]
+    },
+    "OutputPreviewPanel": {
+      "targetRegion": [
+        129,
+        938,
+        888,
+        1279
+      ],
+      "visibleBounds": [
+        129,
+        938,
+        888,
+        1279
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        129,
+        938
+      ]
+    },
+    "SmeltButton": {
+      "targetRegion": [
+        314,
+        1331,
+        705,
+        1409
+      ],
+      "visibleBounds": [
+        314,
+        1331,
+        705,
+        1409
+      ],
+      "unionBounds": [
+        314,
+        1331,
+        705,
+        1409
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        314,
+        1331
+      ]
+    },
+    "CloseButton": {
+      "targetRegion": [
+        872,
+        110,
+        941,
+        180
+      ],
+      "visibleBounds": [
+        0,
+        0,
+        52,
+        50
+      ],
+      "unionBounds": [
+        0,
+        0,
+        52,
+        50
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        875,
+        114
+      ],
+      "displaySize": [
+        64,
+        62
+      ],
+      "source": "Cook_CloseButton_{State}_52x50.png"
+    }
+  },
+  "closeButtonHashParity": {
+    "Normal": {
+      "source": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d",
+      "candidate": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d"
+    },
+    "Hover": {
+      "source": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec",
+      "candidate": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec"
+    },
+    "Pressed": {
+      "source": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65",
+      "candidate": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65"
+    },
+    "Disabled": {
+      "source": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3",
+      "candidate": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "projectId": "EquipmentEnchantingUI",
+  "splitVersion": "SplitV01",
+  "status": "PASS",
+  "formalPngCount": 23,
+  "checks": {
+    "filenameAndDimensions": "PASS",
+    "nonEmptyAlpha": "PASS",
+    "transparentCorners": "PASS",
+    "buttonSafeCenterAlpha255": "PASS",
+    "fourStateCompleteness": "PASS",
+    "stateCanvasAndAlphaConsistency": "PASS",
+    "parentChildSeparation": "PASS",
+    "checkerboard": "PASS",
+    "reassembly": "PASS"
+  },
+  "sharedComponentPolicy": {
+    "HelpButton": "Exact four-state reuse from Equipment Identification reference",
+    "CloseButton": "Exact four-state reuse from Cook reference"
+  }
+}
