@@ -1,164 +1,25 @@
 {
-  "formal_png_count": 13,
-  "files_pass": true,
-  "canonical_close_sha256_match": true,
-  "overall": "PASS",
-  "files": [
-    {
-      "file": "CharacterAttributes_AttributeRowLong_Empty_448x77.png",
-      "dimensions": [
-        448,
-        77
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_AttributeRowShort_Empty_383x77.png",
-      "dimensions": [
-        383,
-        77
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_CloseButton_Disabled_52x50.png",
-      "dimensions": [
-        52,
-        50
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_CloseButton_Hover_52x50.png",
-      "dimensions": [
-        52,
-        50
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_CloseButton_Normal_52x50.png",
-      "dimensions": [
-        52,
-        50
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_CloseButton_Pressed_52x50.png",
-      "dimensions": [
-        52,
-        50
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_MainPanelBase_Default_964x1367.png",
-      "dimensions": [
-        964,
-        1367
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_ProgressFill_Default_525x49.png",
-      "dimensions": [
-        525,
-        49
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_ProgressTrack_Empty_862x78.png",
-      "dimensions": [
-        862,
-        78
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_TabButton_Disabled_189x72.png",
-      "dimensions": [
-        189,
-        72
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_TabButton_Hover_189x72.png",
-      "dimensions": [
-        189,
-        72
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_TabButton_Normal_189x72.png",
-      "dimensions": [
-        189,
-        72
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    },
-    {
-      "file": "CharacterAttributes_TabButton_Pressed_189x72.png",
-      "dimensions": [
-        189,
-        72
-      ],
-      "alpha_minmax": [
-        0,
-        255
-      ],
-      "pass": true
-    }
-  ]
+  "projectId": "CharacterAttributesUI",
+  "precisionCutoutVersion": "V03",
+  "formalOutput": "Components/out/CharacterAttributesUI",
+  "formalPngCount": 19,
+  "projectValidator": {
+    "result": "PASS",
+    "errors": []
+  },
+  "alphaAudit": {
+    "result": "PASS",
+    "trueTransparentExterior": true,
+    "lowAlphaResidue1To5": 0
+  },
+  "stateAudit": {
+    "result": "PASS",
+    "sameCanvasPerFamily": true,
+    "sameAlphaSilhouettePerFamily": true
+  },
+  "canonicalCloseButtonHashMatch": true,
+  "reassembly100Percent": "PASS",
+  "checkerboard": "PASS",
+  "edgeReview400Percent": "PASS",
+  "overall": "PASS_INTERNAL_PENDING_USER_REVIEW"
 }

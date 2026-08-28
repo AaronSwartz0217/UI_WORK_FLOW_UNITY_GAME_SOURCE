@@ -1,5 +1,9 @@
 # Equipment Advancement / EquipmentAdvancementUI
 
+Current formal set: 25 PNG files in `Components/out/EquipmentAdvancementUI/`.
+
+CleanParentV02 replaces the older smeared parent-panel fills with blank black-steel texture sampled from the approved full UI at original pixel density. The main panel, four section panels, and two equipment rows were reassembled and revalidated after this correction.
+
 ```text
 ProjectDisplayName: Equipment Advancement
 ProjectId: EquipmentAdvancementUI

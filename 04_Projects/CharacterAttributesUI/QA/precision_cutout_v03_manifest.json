@@ -1,0 +1,314 @@
+{
+  "stage": "precision_cutout_candidate_v03",
+  "formalPromotion": "blocked_until_visual_QA",
+  "source": "FullUI/CharacterAttributesUI_FullUI_Review02_1024x1536.png",
+  "alphaMethod": "hand-audited source bounds plus supersampled chamfer silhouette; no exterior parent pixels",
+  "componentCount": 19,
+  "coordinates": {
+    "MainPanelBase": {
+      "targetRegion": [
+        30,
+        97,
+        994,
+        1463
+      ],
+      "visibleBounds": [
+        30,
+        97,
+        994,
+        1463
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        30,
+        97
+      ]
+    },
+    "NormalAttributesTabButton": {
+      "targetRegion": [
+        63,
+        127,
+        253,
+        198
+      ],
+      "visibleBounds": [
+        63,
+        127,
+        253,
+        198
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        63,
+        127
+      ]
+    },
+    "VariantAttributesTabButton": {
+      "targetRegion": [
+        263,
+        127,
+        448,
+        198
+      ],
+      "visibleBounds": [
+        263,
+        127,
+        448,
+        198
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        263,
+        127
+      ]
+    },
+    "ExperienceTrack": {
+      "targetRegion": [
+        81,
+        456,
+        942,
+        535
+      ],
+      "visibleBounds": [
+        81,
+        456,
+        942,
+        535
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        81,
+        456
+      ]
+    },
+    "SatietyTrack": {
+      "targetRegion": [
+        81,
+        558,
+        942,
+        631
+      ],
+      "visibleBounds": [
+        81,
+        558,
+        942,
+        631
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        81,
+        558
+      ]
+    },
+    "ExperienceFill": {
+      "targetRegion": [
+        91,
+        568,
+        617,
+        621
+      ],
+      "visibleBounds": [
+        91,
+        568,
+        617,
+        621
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        91,
+        568
+      ]
+    },
+    "SatietyFill": {
+      "targetRegion": [
+        91,
+        568,
+        617,
+        621
+      ],
+      "visibleBounds": [
+        91,
+        568,
+        617,
+        621
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        91,
+        568
+      ]
+    },
+    "AttributeRowShort": {
+      "targetRegion": [
+        82,
+        671,
+        463,
+        747
+      ],
+      "visibleBounds": [
+        82,
+        671,
+        463,
+        747
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        82,
+        671
+      ]
+    },
+    "AttributeRowLong": {
+      "targetRegion": [
+        495,
+        671,
+        943,
+        747
+      ],
+      "visibleBounds": [
+        495,
+        671,
+        943,
+        747
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        495,
+        671
+      ]
+    },
+    "CloseButton": {
+      "targetRegion": [
+        890,
+        128,
+        960,
+        195
+      ],
+      "visibleBounds": [
+        0,
+        0,
+        52,
+        50
+      ],
+      "cropOffset": [
+        0,
+        0
+      ],
+      "reassembly": [
+        899,
+        136
+      ],
+      "displaySize": [
+        62,
+        60
+      ],
+      "source": "Cook_CloseButton_{State}_52x50.png"
+    }
+  },
+  "repeatedReassembly": {
+    "AttributeRowShort": [
+      [
+        82,
+        671
+      ],
+      [
+        82,
+        755
+      ],
+      [
+        82,
+        839
+      ],
+      [
+        82,
+        923
+      ],
+      [
+        82,
+        1007
+      ]
+    ],
+    "AttributeRowLong": [
+      [
+        495,
+        671
+      ],
+      [
+        495,
+        755
+      ],
+      [
+        495,
+        839
+      ],
+      [
+        495,
+        923
+      ],
+      [
+        495,
+        1007
+      ],
+      [
+        495,
+        1091
+      ],
+      [
+        495,
+        1175
+      ],
+      [
+        495,
+        1259
+      ],
+      [
+        495,
+        1343
+      ]
+    ]
+  },
+  "closeButtonHashParity": {
+    "Normal": {
+      "source": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d",
+      "candidate": "b45b6a0e3dbca0323c1bd630ad2570fb3accc6759229f865cdf1ea06e988e39d"
+    },
+    "Hover": {
+      "source": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec",
+      "candidate": "757c08c5caa17090eed5eea0e8dea18b6a08fbabd536407b6f85142d788405ec"
+    },
+    "Pressed": {
+      "source": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65",
+      "candidate": "a47073d753107bc4f035da7ebd38e9ee42b1fcee3e12fda25dc47f7999adcf65"
+    },
+    "Disabled": {
+      "source": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3",
+      "candidate": "e9bb8902d2c3e6f8f213ab1dfc42d4fcc535665be9e9b53759578280afeaabd3"
+    }
+  }
+}

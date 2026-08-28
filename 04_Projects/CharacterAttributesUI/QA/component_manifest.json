@@ -1,72 +1,33 @@
 {
   "project": "CharacterAttributesUI",
   "source": "../FullUI/CharacterAttributesUI_FullUI_Review02_1024x1536.png",
-  "selected_full_ui": "Review02",
-  "parent_child_policy": "MainPanelBase has all child regions texture-filled before export.",
-  "canonical_reuse": {
+  "selectedFullUI": "Review02",
+  "precisionCutoutVersion": "V03",
+  "formalOutput": "../Components/out/CharacterAttributesUI",
+  "formalPngCount": 19,
+  "parentChildPolicy": "MainPanelBase has child regions reconstructed before export.",
+  "canonicalReuse": {
     "CharacterAttributes_CloseButton": {
-      "source_family": "../../../01_References/Style/Standards/Primary_Cook/Cook_CloseButton_{State}_52x50.png",
+      "sourceFamily": "../../../01_References/Style/Standards/Primary_Cook/Cook_CloseButton_{State}_52x50.png",
       "method": "verbatim copy with project-prefix rename",
       "states": [
         "Normal",
         "Hover",
         "Pressed",
         "Disabled"
-      ]
+      ],
+      "hashMatch": true
     }
   },
   "placement": {
-    "MainPanelBase": [
-      30,
-      97
-    ],
-    "TabButton": [
-      [
-        63,
-        126
-      ],
-      [
-        263,
-        126
-      ]
-    ],
-    "CloseButton_display": [
-      890,
-      128,
-      70,
-      67
-    ],
-    "ProgressTrack": [
-      [
-        81,
-        457
-      ],
-      [
-        81,
-        558
-      ]
-    ],
-    "ProgressFill": [
-      92,
-      572
-    ],
-    "AttributeRowShort_y": [
-      672,
-      756,
-      840,
-      923,
-      1007
-    ],
-    "AttributeRowLong_y": [
-      672,
-      756,
-      840,
-      923,
-      1007,
-      1090,
-      1174,
-      1257,
-      1341
-    ]
+    "MainPanelBase": [30, 97],
+    "NormalAttributesTabButton": [63, 127],
+    "VariantAttributesTabButton": [263, 127],
+    "CloseButtonDisplay": [899, 136, 62, 60],
+    "ExperienceTrack": [81, 456],
+    "SatietyTrack": [81, 558],
+    "SatietyFill": [91, 568],
+    "AttributeRowShortY": [671, 755, 839, 923, 1007],
+    "AttributeRowLongY": [671, 755, 839, 923, 1007, 1091, 1175, 1259, 1343]
   }
 }

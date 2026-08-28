@@ -1,30 +1,39 @@
 {
-  "activeProject": "CharacterAttributesUI",
+  "activeProject": "SmeltingUI",
+  "lastUpdated": "2026-08-28",
   "projects": {
     "CharacterAttributesUI": {
       "status": "final_components_pending_user_review",
-      "wireframe": "../02_InputQueue/01_RootPriority/CharacterAttributesUI/Wireframe/CharacterAttributesUI_Wireframe.jpeg",
-      "primaryStyle": "../01_References/Style/Standards/Primary_Cook",
-      "secondaryStyle": "../01_References/Style/Standards/Secondary_EquipmentIdentification",
-      "textPolicy": "text_clean_from_full_ui_draft",
+      "wireframe": "../04_Projects/CharacterAttributesUI/in/CharacterAttributesUI_Wireframe_815x1110.jpeg",
       "currentFullUI": "../04_Projects/CharacterAttributesUI/FullUI/CharacterAttributesUI_FullUI_Review02_1024x1536.png",
-      "panelRatioDeviationPercent": 1.972,
-      "fullUIReview": "approved_by_continue",
-      "formalPngCount": 13,
-      "formalOutput": "../04_Projects/CharacterAttributesUI/out/CharacterAttributesUI",
-      "reassemblyPreview": "../04_Projects/CharacterAttributesUI/QA/Previews/CharacterAttributes_Reassembled.png",
+      "precisionCutoutVersion": "V03",
+      "formalPngCount": 19,
+      "formalOutput": "../04_Projects/CharacterAttributesUI/Components/out/CharacterAttributesUI",
+      "reassemblyPreview": "../04_Projects/CharacterAttributesUI/into/ReassemblyPreview/CharacterAttributes_PrecisionV03_Reassembled_Checkerboard.png",
       "validatorResult": "PASS",
+      "alphaAudit": "PASS",
       "canonicalCloseButtonHashMatch": true,
       "finalUserReview": "pending"
     },
     "EquipmentAdvancementUI": {
       "status": "final_components_pending_user_review",
       "fullUIApproved": true,
+      "cleanParentVersion": "V02",
       "formalPngCount": 25,
       "formalOutput": "../04_Projects/EquipmentAdvancementUI/Components/out/EquipmentAdvancementUI",
-      "reassemblyPreview": "../04_Projects/EquipmentAdvancementUI/into/ReassemblyPreview/EquipmentAdvancementUI_Reassembly_Default_1078x1459.png",
+      "reassemblyPreview": "../04_Projects/EquipmentAdvancementUI/into/ReassemblyPreview/EquipmentAdvancementUI_Reassembly_CleanParentV02_Checkerboard_1078x1459.png",
       "validatorResult": "PASS",
+      "alphaAudit": "PASS",
       "finalUserReview": "pending"
+    },
+    "SmeltingUI": {
+      "status": "full_ui_review02_pending_user_approval",
+      "wireframe": "../04_Projects/SmeltingUI/in/SmeltingUI_Wireframe.jpeg",
+      "currentFullUI": "../04_Projects/SmeltingUI/FullUI/SmeltingUI_FullUI_Review02_1024x1536.png",
+      "panelRatioDeviationPercent": 2.112,
+      "formalPngCount": 0,
+      "formalOutput": "../04_Projects/SmeltingUI/Components/out/SmeltingUI",
+      "fullUIReview": "pending"
     },
     "EquipmentCraftingUI": {
       "status": "needs_revision",
@@ -34,8 +43,7 @@
       "validationErrors": [
         "missing document: QA/COMPONENT_COORDINATES.md",
         "missing document: QA/PROPORTION_LOOP_01.md"
-      ],
-      "migrationSource": "../../EquipmentCraftingUI"
+      ]
     },
     "CookingModeUI": {
       "status": "needs_revision",
@@ -45,8 +53,7 @@
       "validationErrors": [
         "missing document: QA/COMPONENT_COORDINATES.md",
         "missing document: QA/PROPORTION_LOOP_01.md"
-      ],
-      "migrationSource": "../../CookingModeUI"
+      ]
     }
   }
 }

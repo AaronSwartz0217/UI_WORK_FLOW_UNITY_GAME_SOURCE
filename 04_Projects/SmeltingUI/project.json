@@ -1,0 +1,47 @@
+{
+  "projectDisplayName": "熔炼",
+  "projectId": "SmeltingUI",
+  "componentPrefix": "Smelting",
+  "status": "full_ui_review02_pending_user_approval",
+  "wireframe": "in/SmeltingUI_Wireframe.jpeg",
+  "wireframeCanvas": {
+    "width": 800,
+    "height": 969
+  },
+  "wireframePanelBounds": {
+    "x": 110,
+    "y": 46,
+    "width": 572,
+    "height": 824
+  },
+  "wireframePanelRatio": 0.694175,
+  "styleReferences": {
+    "primary": "in/StylePrimary_Cook",
+    "secondary": "in/StyleSecondary_EquipmentIdentification",
+    "board": "in/SharedComponents_StyleBoard.png"
+  },
+  "textPolicy": "remove ordinary text and dynamic numbers; retain functional close X",
+  "currentFullUI": "FullUI/SmeltingUI_FullUI_Review02_1024x1536.png",
+  "canvas": {
+    "width": 1024,
+    "height": 1536,
+    "scaleX": 1.0,
+    "scaleY": 1.0
+  },
+  "currentPanelBounds": {
+    "x": 33,
+    "y": 71,
+    "width": 952,
+    "height": 1401
+  },
+  "currentPanelRatio": 0.679515,
+  "panelRatioDeviationPercent": 2.112,
+  "formalOutput": "Components/out/SmeltingUI",
+  "formalPngCount": 0,
+  "requiresFullUIApproval": true,
+  "fullUIApproved": false,
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}

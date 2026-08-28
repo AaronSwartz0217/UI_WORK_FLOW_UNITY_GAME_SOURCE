@@ -4,26 +4,45 @@
   "componentPrefix": "CharacterAttributes",
   "status": "final_components_pending_user_review",
   "wireframe": "in/CharacterAttributesUI_Wireframe_815x1110.jpeg",
-  "wireframeCanvas": {"width": 815, "height": 1110},
-  "measuredPanelBounds": {"x": 97, "y": 57, "width": 639, "height": 924},
+  "wireframeCanvas": {
+    "width": 815,
+    "height": 1110
+  },
+  "measuredPanelBounds": {
+    "x": 97,
+    "y": 57,
+    "width": 639,
+    "height": 924
+  },
   "measuredPanelRatio": 0.691558,
   "styleReferences": {
     "primary": "in/StylePrimary_Cook",
     "secondary": "in/StyleSecondary_EquipmentIdentification"
   },
-  "textPolicy": "text_clean_from_full_ui_draft",
-  "canvas": {"width": 1024, "height": 1536, "scaleX": 1.0, "scaleY": 1.0},
+  "textPolicy": "remove ordinary text and dynamic numbers; retain functional symbols",
+  "canvas": {
+    "width": 1024,
+    "height": 1536,
+    "scaleX": 1.0,
+    "scaleY": 1.0
+  },
   "currentFullUI": "FullUI/CharacterAttributesUI_FullUI_Review02_1024x1536.png",
-  "currentMeasuredPanelBounds": {"x": 30, "y": 97, "width": 964, "height": 1367},
-  "currentMeasuredPanelRatio": 0.705194,
-  "panelRatioDeviationPercent": 1.972,
-  "formalOutput": "out/CharacterAttributesUI",
-  "formalPngCount": 13,
+  "currentMeasuredPanelBounds": {
+    "x": 30,
+    "y": 97,
+    "width": 964,
+    "height": 1366
+  },
+  "currentMeasuredPanelRatio": 0.705710,
+  "panelRatioDeviationPercent": 2.047,
+  "formalOutput": "Components/out/CharacterAttributesUI",
+  "formalPngCount": 19,
   "validatorResult": "PASS",
+  "precisionCutoutVersion": "V03",
   "canonicalCloseButtonHashMatch": true,
-  "requiresFullUIApproval": true,
+  "fullUIApprovedForSplit": true,
   "requiresFourButtonStates": true,
   "requiresTrueAlpha": true,
   "requiresReassembly": true,
-  "requiresFinalQA": true
+  "requiresFinalUserReview": true
 }

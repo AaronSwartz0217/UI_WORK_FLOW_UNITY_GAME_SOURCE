@@ -17,6 +17,7 @@
 - [x] Original-position reassembly passed.
 - [x] Formal output contains PNG assets only.
 - [x] `validate_project.py` result: `PASS` (25 PNG, zero errors).
+- [x] CleanParentV02 removed the legacy vertical smear artifacts from all seven parent components.
 - [ ] Final component set approved by user.
 
 Conclusion: `PASS_PENDING_FINAL_USER_REVIEW`

@@ -1,0 +1,23 @@
+{
+  "version": "CleanParentV02",
+  "sourceFullUI": "FullUI/EquipmentAdvancementUI_FullUI_Review02.png",
+  "candidateCount": 25,
+  "cleanedParents": [
+    "EquipmentAdvancement_MainPanelBase_Default_985x1384.png",
+    "EquipmentAdvancement_TopEquipmentPanel_Empty_883x332.png",
+    "EquipmentAdvancement_QualityPanel_Empty_880x211.png",
+    "EquipmentAdvancement_EquipmentPairPanel_Empty_880x282.png",
+    "EquipmentAdvancement_ProgressActionPanel_Empty_880x307.png",
+    "EquipmentAdvancement_LeftEquipmentRow_Empty_351x127.png",
+    "EquipmentAdvancement_RightEquipmentRow_Empty_355x127.png"
+  ],
+  "textureSourceRegion": [
+    150,
+    220,
+    430,
+    410
+  ],
+  "method": "same-source blank texture mirrored at original pixel density with feathered interior transitions",
+  "preview": "into\\ReassemblyPreview\\EquipmentAdvancementUI_Reassembly_CleanParentV02_1078x1459.png",
+  "checkerboard": "into\\ReassemblyPreview\\EquipmentAdvancementUI_Reassembly_CleanParentV02_Checkerboard_1078x1459.png"
+}
