@@ -7,7 +7,7 @@
 | EquipmentEnchanting_EquipmentSlot_Empty_189x188.png | EquipmentSlot | Empty | 189×188 | True alpha | PASS |
 | EquipmentEnchanting_AttributeListPanel_Empty_907x512.png | AttributeListPanel | Empty | 907×512 | True alpha | PASS |
 | EquipmentEnchanting_AttributeRow_Empty_755x84.png | AttributeRow | Empty | 755×84 | True alpha | PASS |
-| EquipmentEnchanting_AttributeToggleSlot_Empty_64x64.png | AttributeToggleSlot | Empty | 64×64 | True alpha | PASS |
+| EquipmentEnchanting_AttributeToggleSlot_Empty_74x74.png | AttributeToggleSlot | Empty | 74×74 | True alpha / repaired edge padding | PASS |
 | EquipmentEnchanting_MaterialPanel_Empty_907x221.png | MaterialPanel | Empty | 907×221 | True alpha | PASS |
 | EquipmentEnchanting_MaterialCard_Empty_402x154.png | MaterialCard | Empty | 402×154 | True alpha | PASS |
 | EquipmentEnchanting_MaterialSlot_Empty_116x116.png | MaterialSlot | Empty | 116×116 | True alpha | PASS |

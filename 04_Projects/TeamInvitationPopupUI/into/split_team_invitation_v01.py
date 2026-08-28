@@ -27,18 +27,26 @@ def crop(box: tuple[int, int, int, int]) -> Image.Image:
 def chamfer_mask(size: tuple[int, int], cut: int) -> Image.Image:
     w, h = size
     cut = max(2, min(cut, w // 4, h // 4))
-    mask = Image.new("L", size, 0)
+    supersample = 8
+    mask = Image.new("L", (w * supersample, h * supersample), 0)
     ImageDraw.Draw(mask).polygon(
-        [(cut, 0), (w - cut - 1, 0), (w - 1, cut), (w - 1, h - cut - 1),
-         (w - cut - 1, h - 1), (cut, h - 1), (0, h - cut - 1), (0, cut)],
+        [(x * supersample, y * supersample) for x, y in
+         [(cut, 0), (w - cut - 1, 0), (w - 1, cut), (w - 1, h - cut - 1),
+          (w - cut - 1, h - 1), (cut, h - 1), (0, h - cut - 1), (0, cut)]],
         fill=255,
     )
-    return mask
+    return mask.resize(size, Image.Resampling.LANCZOS).point(lambda value: 0 if value <= 5 else value)
 
 
 def apply_mask(im: Image.Image, cut: int) -> Image.Image:
     out = im.copy().convert("RGBA")
     out.putalpha(chamfer_mask(out.size, cut))
+    return out
+
+
+def pad_transparent(im: Image.Image, padding: int) -> Image.Image:
+    out = Image.new("RGBA", (im.width + padding * 2, im.height + padding * 2), (0, 0, 0, 0))
+    out.alpha_composite(im, (padding, padding))
     return out
 
 
@@ -108,7 +116,7 @@ header_box = (156, 72, 1376, 179)
 list_box = (157, 185, 1376, 942)
 row_box = (188, 214, 1349, 315)
 accept_box = (968, 223, 1140, 300)
-reject_box = (1164, 223, 1328, 300)
+reject_box = (1157, 223, 1335, 306)
 
 source = Image.open(SOURCE).convert("RGB")
 body_texture = source.crop((220, 340, 1320, 900))
@@ -143,7 +151,9 @@ row = clean(
 row = apply_mask(row, 10)
 
 accept = apply_mask(crop(accept_box), 12)
-reject = apply_mask(crop(reject_box), 12)
+for obsolete in CANDIDATES.glob("TeamInvitation_RejectButton_*_164x77.png"):
+    obsolete.unlink()
+reject = pad_transparent(apply_mask(crop(reject_box), 12), 3)
 
 saved: list[Path] = []
 saved.append(save_component("MainPanelBase", "Empty", main))
@@ -171,7 +181,7 @@ canvas.alpha_composite(header, (header_box[0], header_box[1]))
 canvas.alpha_composite(list_panel, (list_box[0], list_box[1]))
 canvas.alpha_composite(row, (row_box[0], row_box[1]))
 canvas.alpha_composite(accept, (accept_box[0], accept_box[1]))
-canvas.alpha_composite(reject, (reject_box[0], reject_box[1]))
+canvas.alpha_composite(reject, (reject_box[0] - 3, reject_box[1] - 3))
 close = Image.open(close_paths["Normal"]).convert("RGBA").resize((62, 60), Image.Resampling.LANCZOS)
 canvas.alpha_composite(close, (1298, 87))
 preview = PREVIEWS / "TeamInvitation_Reassembled_SplitV01_1536x1024.png"
@@ -190,6 +200,11 @@ state_strip = Image.new("RGBA", (accept.width * 4 + 18, accept.height), (0, 0, 0
 for i, state in enumerate(("Normal", "Hover", "Pressed", "Disabled")):
     state_strip.alpha_composite(button_states(accept)[state], (i * accept.width + i * 6, 0))
 state_strip.save(PREVIEWS / "TeamInvitation_AcceptButton_SplitV01_FourStates.png")
+
+reject_state_strip = Image.new("RGBA", (reject.width * 4 + 18, reject.height), (0, 0, 0, 0))
+for i, state in enumerate(("Normal", "Hover", "Pressed", "Disabled")):
+    reject_state_strip.alpha_composite(button_states(reject)[state], (i * reject.width + i * 6, 0))
+reject_state_strip.save(PREVIEWS / "TeamInvitation_RejectButton_SplitV01_FourStates.png")
 
 main.save(TEMPLATES / "TeamInvitation_CleanTemplate_Empty_1266x921.png")
 manifest = {

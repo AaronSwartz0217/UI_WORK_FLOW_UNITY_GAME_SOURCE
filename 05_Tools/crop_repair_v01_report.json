@@ -1,0 +1,159 @@
+{
+  "files": {
+    "EquipmentAdvancement_RightEquipmentSlot_Default_86x89.png": {
+      "mode": "RGBA",
+      "size": [
+        86,
+        89
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "lowAlpha1To5": 0,
+      "visibleBounds": [
+        1,
+        1,
+        85,
+        88
+      ]
+    },
+    "TeamInvitation_RejectButton_Normal_184x89.png": {
+      "mode": "RGBA",
+      "size": [
+        184,
+        89
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "lowAlpha1To5": 0,
+      "visibleBounds": [
+        3,
+        3,
+        181,
+        86
+      ]
+    },
+    "TeamInvitation_RejectButton_Hover_184x89.png": {
+      "mode": "RGBA",
+      "size": [
+        184,
+        89
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "lowAlpha1To5": 0,
+      "visibleBounds": [
+        3,
+        3,
+        181,
+        86
+      ]
+    },
+    "TeamInvitation_RejectButton_Pressed_184x89.png": {
+      "mode": "RGBA",
+      "size": [
+        184,
+        89
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "lowAlpha1To5": 0,
+      "visibleBounds": [
+        3,
+        3,
+        181,
+        86
+      ]
+    },
+    "TeamInvitation_RejectButton_Disabled_184x89.png": {
+      "mode": "RGBA",
+      "size": [
+        184,
+        89
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "lowAlpha1To5": 0,
+      "visibleBounds": [
+        3,
+        3,
+        181,
+        86
+      ]
+    },
+    "EquipmentEnchanting_AttributeToggleSlot_Empty_74x74.png": {
+      "mode": "RGBA",
+      "size": [
+        74,
+        74
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "lowAlpha1To5": 0,
+      "visibleBounds": [
+        2,
+        2,
+        72,
+        72
+      ]
+    }
+  },
+  "status": "PASS",
+  "sourceBounds": {
+    "EquipmentAdvancement_RightEquipmentSlot": "Components/out/EquipmentAdvancementUI/EquipmentAdvancement_LeftEquipmentSlot_Default_86x89.png",
+    "TeamInvitation_RejectButton": [
+      1157,
+      223,
+      1335,
+      306
+    ],
+    "EquipmentEnchanting_AttributeToggleSlot": [
+      792,
+      510,
+      862,
+      580
+    ]
+  },
+  "replacementMap": {
+    "EquipmentAdvancement_RightEquipmentSlot_Default_86x89.png": "same filename; pixels reused from LeftEquipmentSlot",
+    "TeamInvitation_RejectButton_*_164x77.png": "TeamInvitation_RejectButton_*_184x89.png",
+    "EquipmentEnchanting_AttributeToggleSlot_Empty_64x64.png": "EquipmentEnchanting_AttributeToggleSlot_Empty_74x74.png"
+  },
+  "promoted": [
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\EquipmentAdvancementUI\\Components\\out\\EquipmentAdvancementUI\\EquipmentAdvancement_RightEquipmentSlot_Default_86x89.png",
+      "sha256": "5b9f19d684553223c46571bea618af1c2d0a0cfa45e10d06e08ad96beab8dc41"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\EquipmentEnchantingUI\\Components\\out\\EquipmentEnchantingUI\\EquipmentEnchanting_AttributeToggleSlot_Empty_74x74.png",
+      "sha256": "b1cd9d673b7a628b502fc147c6dda2bb81416e0c3076bfe7781a6cdbe6327627"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\TeamInvitationPopupUI\\Components\\out\\TeamInvitationPopupUI\\TeamInvitation_RejectButton_Normal_184x89.png",
+      "sha256": "acc85f989155a7fabb2c366fb08695be583c59c85a3101a070cef8bad37ed6d8"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\TeamInvitationPopupUI\\Components\\out\\TeamInvitationPopupUI\\TeamInvitation_RejectButton_Hover_184x89.png",
+      "sha256": "7a9c1a9f3976fcd739a6fa7e6a9f4ce27e90aa3edc33657040b2fffa6c6a78b0"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\TeamInvitationPopupUI\\Components\\out\\TeamInvitationPopupUI\\TeamInvitation_RejectButton_Pressed_184x89.png",
+      "sha256": "05776fb778c362eb42f779b8f02fe355774478ab65a6688230fed2c0dc4b2100"
+    },
+    {
+      "path": "C:\\Users\\Administrator\\Desktop\\UIWorkflow\\04_Projects\\TeamInvitationPopupUI\\Components\\out\\TeamInvitationPopupUI\\TeamInvitation_RejectButton_Disabled_184x89.png",
+      "sha256": "6202c335881a116983b6ec73fd14e548df7a163d40cfecb5f6ac12eb944898ee"
+    }
+  ]
+}

@@ -10,10 +10,10 @@
 | TeamInvitation_AcceptButton_Hover_172x77.png | AcceptButton | Hover | 172×77 | PASS |
 | TeamInvitation_AcceptButton_Pressed_172x77.png | AcceptButton | Pressed | 172×77 | PASS |
 | TeamInvitation_AcceptButton_Disabled_172x77.png | AcceptButton | Disabled | 172×77 | PASS |
-| TeamInvitation_RejectButton_Normal_164x77.png | RejectButton | Normal | 164×77 | PASS |
-| TeamInvitation_RejectButton_Hover_164x77.png | RejectButton | Hover | 164×77 | PASS |
-| TeamInvitation_RejectButton_Pressed_164x77.png | RejectButton | Pressed | 164×77 | PASS |
-| TeamInvitation_RejectButton_Disabled_164x77.png | RejectButton | Disabled | 164×77 | PASS |
+| TeamInvitation_RejectButton_Normal_184x89.png | RejectButton | Normal | 184×89 | PASS — repaired union crop |
+| TeamInvitation_RejectButton_Hover_184x89.png | RejectButton | Hover | 184×89 | PASS — repaired union crop |
+| TeamInvitation_RejectButton_Pressed_184x89.png | RejectButton | Pressed | 184×89 | PASS — repaired union crop |
+| TeamInvitation_RejectButton_Disabled_184x89.png | RejectButton | Disabled | 184×89 | PASS — repaired union crop |
 | TeamInvitation_CloseButton_Normal_52x50.png | CloseButton | Normal | 52×50 | PASS |
 | TeamInvitation_CloseButton_Hover_52x50.png | CloseButton | Hover | 52×50 | PASS |
 | TeamInvitation_CloseButton_Pressed_52x50.png | CloseButton | Pressed | 52×50 | PASS |

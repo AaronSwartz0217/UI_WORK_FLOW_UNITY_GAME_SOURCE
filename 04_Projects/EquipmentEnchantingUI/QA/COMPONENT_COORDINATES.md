@@ -11,7 +11,7 @@
 | EquipmentSlot | `412, 241, 189, 188` | 1 |
 | AttributeListPanel | `58, 473, 907, 512` | 1 |
 | AttributeRow | `131, 501, 755, 84`; Y=`595, 688, 782, 876` | 5 |
-| AttributeToggleSlot | `795, 513, 64, 64`; Y=`607, 701, 795, 889` | 5 |
+| AttributeToggleSlot | `790, 508, 74, 74`; Y=`602, 696, 790, 884` | 5 |
 | MaterialPanel | `58, 998, 907, 221` | 1 |
 | MaterialCard | `99, 1033, 402, 154`; `522, 1033, 402, 154` | 2 |
 | MaterialSlot | `116, 1053, 116, 116`; `540, 1053, 116, 116` | 2 |

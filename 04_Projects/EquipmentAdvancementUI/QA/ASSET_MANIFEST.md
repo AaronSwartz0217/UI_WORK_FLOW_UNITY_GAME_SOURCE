@@ -13,7 +13,7 @@ All files below are RGBA PNGs in `../Components/out/EquipmentAdvancementUI/` and
 | RightEquipmentRow | Empty | 355x127 | 1 | Pass |
 | TopEquipmentSlot | Default | 158x165 | 1 | Pass |
 | LeftEquipmentSlot | Default | 86x89 | 1 | Pass |
-| RightEquipmentSlot | Default | 86x89 | 1 | Pass |
+| RightEquipmentSlot | Default | 86x89 | 1 | Pass — paired LeftEquipmentSlot reused; crop repaired |
 | QualityArrow | Default | 56x47 | 1 | Pass |
 | ProgressTrack | Default | 732x38 | 1 | Pass |
 | ProgressFill | Default | 143x38 | 1 | Pass |

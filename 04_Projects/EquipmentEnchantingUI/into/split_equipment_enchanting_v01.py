@@ -21,7 +21,7 @@ for folder in (CANDIDATES, PREVIEWS, FORMAL, TEMPLATES, QA):
 src = Image.open(SOURCE).convert("RGBA")
 
 
-def polygon_mask(size, points, supersample=4):
+def polygon_mask(size, points, supersample=8):
     width, height = size
     large = Image.new("L", (width * supersample, height * supersample), 0)
     ImageDraw.Draw(large).polygon([(x * supersample, y * supersample) for x, y in points], fill=255)
@@ -41,6 +41,12 @@ def cut_chamfered(box, chamfer):
     image = src.crop(box).convert("RGBA")
     image.putalpha(polygon_mask(image.size, chamfer_points(image.width, image.height, chamfer)))
     return image
+
+
+def pad_transparent(image, padding):
+    result = Image.new("RGBA", (image.width + padding * 2, image.height + padding * 2), (0, 0, 0, 0))
+    result.alpha_composite(image, (padding, padding))
+    return result
 
 
 def tiled_texture(size, texture):
@@ -131,7 +137,7 @@ boxes = {
     "EquipmentSlot": (412, 241, 601, 429),
     "AttributeListPanel": (58, 473, 965, 985),
     "AttributeRow": (131, 501, 886, 585),
-    "AttributeToggleSlot": (795, 513, 859, 577),
+    "AttributeToggleSlot": (792, 510, 862, 580),
     "MaterialPanel": (58, 998, 965, 1219),
     "MaterialCard": (522, 1033, 924, 1187),
     "MaterialSlot": (540, 1053, 656, 1169),
@@ -179,7 +185,10 @@ attribute_row = clean_child_regions(
     texture=base_texture,
 )
 attribute_row.putalpha(polygon_mask(attribute_row.size, chamfer_points(attribute_row.width, attribute_row.height, 8)))
-toggle_slot = cut_chamfered(boxes["AttributeToggleSlot"], 5)
+obsolete_toggle = CANDIDATES / "EquipmentEnchanting_AttributeToggleSlot_Empty_64x64.png"
+if obsolete_toggle.exists():
+    obsolete_toggle.unlink()
+toggle_slot = pad_transparent(cut_chamfered(boxes["AttributeToggleSlot"], 7), 2)
 
 material_panel = cut_chamfered(boxes["MaterialPanel"], 11)
 material_panel = clean_child_regions(
@@ -239,7 +248,7 @@ for state in ("Normal", "Hover", "Pressed", "Disabled"):
     shutil.copy2(close_source, close_target)
 
 row_positions = [(131, y) for y in (501, 595, 688, 782, 876)]
-toggle_positions = [(795, y) for y in (513, 607, 701, 795, 889)]
+toggle_positions = [(790, y) for y in (508, 602, 696, 790, 884)]
 card_positions = [(99, 1033), (522, 1033)]
 material_slot_positions = [(116, 1053), (540, 1053)]
 
@@ -294,6 +303,8 @@ coordinates = {
 }
 coordinates["AttributeRow"]["reassembly"] = row_positions
 coordinates["AttributeToggleSlot"]["reassembly"] = toggle_positions
+coordinates["AttributeToggleSlot"]["visibleBounds"] = [2, 2, 72, 72]
+coordinates["AttributeToggleSlot"]["cropOffset"] = [-2, -2]
 coordinates["MaterialCard"]["reassembly"] = card_positions
 coordinates["MaterialSlot"]["reassembly"] = material_slot_positions
 coordinates["EnchantButton"]["unionBounds"] = list(boxes["EnchantButton"])

@@ -35,10 +35,10 @@
       300
     ],
     "RejectButton": [
-      1164,
+      1157,
       223,
-      1328,
-      300
+      1335,
+      306
     ],
     "CloseButtonDisplay": [
       1298,
@@ -50,19 +50,19 @@
   "files": [
     {
       "name": "TeamInvitation_AcceptButton_Disabled_172x77.png",
-      "sha256": "0c1a494cc62038d6ed8f0307d46abfeed0536c1bb0199125305df1632309802a"
+      "sha256": "8871d366906729c4c0e75dd53bdf58fccf6e9ff5cfa6481e3f4dde0462a18d52"
     },
     {
       "name": "TeamInvitation_AcceptButton_Hover_172x77.png",
-      "sha256": "d0fb79f45cd87e0f008218c31b7f0a88427056ebf0c9fdf8bcc2278118d39fe9"
+      "sha256": "337cb5cbe2b01e7af6fffa65cbaf917b56c2c5e3be9e3ed913f7589dfb22e009"
     },
     {
       "name": "TeamInvitation_AcceptButton_Normal_172x77.png",
-      "sha256": "4ae99f5d8d49b8ef2f4573426a81a813e46103f0c7a419ccbb1b573e7fa9cd42"
+      "sha256": "a883533069e74d28eaefcabdf93799eef32da266e4e8696d423d0a8251b4868b"
     },
     {
       "name": "TeamInvitation_AcceptButton_Pressed_172x77.png",
-      "sha256": "fba681cc7760386e93d85e490336ae8d3e159059e282784f7e59152c78f0f108"
+      "sha256": "12030698a2f96519629cf3294729bc3bb34777577b60d04ccc7dbd3fefacc3ea"
     },
     {
       "name": "TeamInvitation_CloseButton_Disabled_52x50.png",
@@ -82,35 +82,35 @@
     },
     {
       "name": "TeamInvitation_HeaderPanel_Empty_1220x107.png",
-      "sha256": "62dc82190cd9c9e940cbdb7c9b152fd983f652091faf078723d552a4942c82af"
+      "sha256": "beb548b5899ca3e853142a9e49810b1c5147616b0b2e402020905693d6e3ba36"
     },
     {
       "name": "TeamInvitation_InvitationListPanel_Empty_1219x757.png",
-      "sha256": "2f59e3c1310ccbee0672db3b991e4cbfa51ab936e2b20f8179b5d5e3314b0707"
+      "sha256": "a166370c006607bb213a9a964021aed1c6b9de43fbbeb9a3f29d0d2d2835cd0a"
     },
     {
       "name": "TeamInvitation_InvitationRow_Empty_1161x101.png",
-      "sha256": "3723da21608ed523f95f1d1703f5296ba92a41e1044168fe68bca267c2b603be"
+      "sha256": "0a1af7ada2f7822bdf171bbaa4182b0837c1ded31babdcc0678e274b2bbb6494"
     },
     {
       "name": "TeamInvitation_MainPanelBase_Empty_1266x921.png",
-      "sha256": "2e467affdc99c6020412472040cae16a9065a876ac7212f70e1171d7156336ae"
+      "sha256": "f3072d1080253e0784b926c6496df627dd1e01fd206202c5cf92d866f3b58bec"
     },
     {
-      "name": "TeamInvitation_RejectButton_Disabled_164x77.png",
-      "sha256": "5f32c97fc79253b6d3535a1e4b31fd4fe946537a970e42d12a104d1349bf0723"
+      "name": "TeamInvitation_RejectButton_Disabled_184x89.png",
+      "sha256": "6202c335881a116983b6ec73fd14e548df7a163d40cfecb5f6ac12eb944898ee"
     },
     {
-      "name": "TeamInvitation_RejectButton_Hover_164x77.png",
-      "sha256": "5e6910e001caf2871ffb27c75ff504c8cc7bbf781bb955f2d1e9aa5b1ddbeda3"
+      "name": "TeamInvitation_RejectButton_Hover_184x89.png",
+      "sha256": "7a9c1a9f3976fcd739a6fa7e6a9f4ce27e90aa3edc33657040b2fffa6c6a78b0"
     },
     {
-      "name": "TeamInvitation_RejectButton_Normal_164x77.png",
-      "sha256": "14a205c4008768ffe479f22f3ac625b4da9e32c027f6772e30b65019282b5fa4"
+      "name": "TeamInvitation_RejectButton_Normal_184x89.png",
+      "sha256": "acc85f989155a7fabb2c366fb08695be583c59c85a3101a070cef8bad37ed6d8"
     },
     {
-      "name": "TeamInvitation_RejectButton_Pressed_164x77.png",
-      "sha256": "e9216655def0a07729fa62c64706a75e8b9ef8bc9af0eaa125d2d3f4e48d228e"
+      "name": "TeamInvitation_RejectButton_Pressed_184x89.png",
+      "sha256": "05776fb778c362eb42f779b8f02fe355774478ab65a6688230fed2c0dc4b2100"
     }
   ]
 }

@@ -14,6 +14,10 @@ QA = ROOT / "QA"
 CANDIDATES.mkdir(parents=True, exist_ok=True)
 PREVIEWS.mkdir(parents=True, exist_ok=True)
 
+obsolete_right_slot = CANDIDATES / "EquipmentAdvancement_RightEquipmentSlot_Default_86x89.png"
+if obsolete_right_slot.exists():
+    obsolete_right_slot.unlink()
+
 for source in FORMAL.glob("*.png"):
     shutil.copy2(source, CANDIDATES / source.name)
 

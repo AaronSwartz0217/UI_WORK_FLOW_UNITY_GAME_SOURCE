@@ -109,7 +109,10 @@ def main():
 
     for component in ["TopEquipmentSlot", "LeftEquipmentSlot", "RightEquipmentSlot", "QualityArrow", "ProgressTrack", "ProgressFill"]:
         radius = 3 if component in ("QualityArrow", "ProgressFill") else 7
-        asset = rgba_crop(master, REGIONS[component], radius)
+        if component == "RightEquipmentSlot":
+            asset = rgba_crop(master, REGIONS["LeftEquipmentSlot"], radius)
+        else:
+            asset = rgba_crop(master, REGIONS[component], radius)
         fn = save_named(asset, component, "Default")
         manifest.append((fn, component, "Default", asset.size))
 

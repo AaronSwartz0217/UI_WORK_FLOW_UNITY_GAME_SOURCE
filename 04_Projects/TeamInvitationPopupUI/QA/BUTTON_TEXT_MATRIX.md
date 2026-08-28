@@ -3,7 +3,7 @@
 | Component | Ordinary text | Functional symbol | Four states | Union Bounds | Result |
 |---|---|---|---|---|---|
 | AcceptButton | Removed | None | Complete | 172×77 | PASS |
-| RejectButton | Removed | None | Complete | 164×77 | PASS |
+| RejectButton | Removed | None | Complete | 184×89 | PASS |
 | CloseButton | None | `X` retained | Complete | 52×50 | PASS |
 | Other panels | All removed | None | N/A | Per component | PASS |
 

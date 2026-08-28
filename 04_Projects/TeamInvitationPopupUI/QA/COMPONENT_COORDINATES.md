@@ -10,4 +10,4 @@
 | InvitationListPanel | `157, 185, 1219, 757` | 1 |
 | InvitationRow | `188, 214, 1161, 101` | 1 / row template |
 | AcceptButton | `968, 223, 172, 77` | 1 / row |
-| RejectButton | `1164, 223, 164, 77` | 1 / row |
+| RejectButton | `1154, 220, 184, 89` (visible source core `1157, 223, 178, 83`) | 1 / row |
