@@ -100,3 +100,5 @@ python SkillPackage/produce-game-ui-assets/scripts/validate_project.py --project
 - 风格参考只提供材质、倒角、边框、高光、阴影、纹理与磨损；
 - 提供白模区域取色、Unity 包安装、玻璃项目脚手架和专项验证脚本；
 - 不上传白模、风格图、生成图或正式 PNG。
+
+该分支也包含外部 [`UNITY_FIGHTCHRACTER_FLOW_PLUGIN`](https://github.com/AaronSwartz0217/UNITY_FIGHTCHRACTER_FLOW_PLUGIN) 的兼容契约与只读检查器。插件库存继续保存在原插件仓库，本仓库不复制 `Packages/`；动画重定向、刚性装备挂点、换装/蒙皮绑骨和 Animator 套动作的能力边界及运行时验收标准见毛玻璃变体说明。

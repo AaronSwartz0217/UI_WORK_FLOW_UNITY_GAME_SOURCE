@@ -13,6 +13,8 @@
 IPhoneGlassUIWorkflow/
 ├─ README.md
 ├─ workflow-variant.json
+├─ external-plugins/
+│  └─ fight-character-plugin.lock.json
 ├─ SkillPackage/produce-iphone-glass-ui-assets/
 │  ├─ SKILL.md
 │  ├─ references/
@@ -115,3 +117,34 @@ python SkillPackage/produce-iphone-glass-ui-assets/scripts/validate_glass_projec
 - 未经用户明确确认，不得覆盖全局 `毛玻璃.json`。
 - 透明 PNG 只保存遮罩、透明色和表面光泽；实时模糊、折射与色散由 URP Shader 完成。
 - 玻璃组件允许设计所需的半透明内部；非玻璃按钮和槽位继续执行内部安全区 Alpha `255` 的基础规则。
+
+## 外部角色插件适配
+
+此分支已按外部仓库 `UNITY_FIGHTCHRACTER_FLOW_PLUGIN` 的当前版本更新兼容契约，但不复制插件库存。插件源码、UPM 包和后续版本仍以原仓库为唯一来源：
+
+```text
+https://github.com/AaronSwartz0217/UNITY_FIGHTCHRACTER_FLOW_PLUGIN
+```
+
+当前锁定并验证：
+
+| 包 | 版本 | 用途 |
+|---|---:|---|
+| `com.codex.split-rig-retargeter` | `1.4.0` | 分离骨架动画重定向、动画修复与烘焙 |
+| `com.codex.mixamo-attachment-toolkit` | `0.3.0` | Mixamo/Humanoid 刚性装备挂点、运行时装备/卸载和姿态偏移 |
+
+对应外部提交为 `095dc3c9a0920c221b681f9ecf10508873451a97`。详细模式边界和验收规则见：
+
+```text
+SkillPackage/produce-iphone-glass-ui-assets/references/fight-character-plugin.md
+```
+
+检查本地插件仓库：
+
+```powershell
+python SkillPackage/produce-iphone-glass-ui-assets/scripts/check_fight_character_plugin.py `
+  --plugin-repo <LocalPluginRepository> `
+  --report <ProjectId>/QA/FIGHT_CHARACTER_PLUGIN_COMPATIBILITY.json
+```
+
+检查器只读取外部仓库，不会复制其 `Packages/`、角色模型或资源。版本、提交、关键 API 或必需文件不匹配时会失败，要求先复核再更新锁文件。

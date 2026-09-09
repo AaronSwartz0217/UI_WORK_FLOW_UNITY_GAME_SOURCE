@@ -26,5 +26,16 @@
     "allowAutomaticPresetOverwrite": false,
     "runtimeShader": "UI/URP Frosted Glass Diffraction",
     "requiresTrueAlpha": true
-  }
+  },
+  "externalUnityPlugins": [
+    {
+      "name": "UNITY_FIGHTCHRACTER_FLOW_PLUGIN",
+      "repository": "https://github.com/AaronSwartz0217/UNITY_FIGHTCHRACTER_FLOW_PLUGIN",
+      "lock": "external-plugins/fight-character-plugin.lock.json",
+      "integrationSpec": "SkillPackage/produce-iphone-glass-ui-assets/references/fight-character-plugin.md",
+      "sourceOfTruth": "external-repository",
+      "copyInventory": false,
+      "requiredOnlyWhenProjectUsesCharacterFlow": true
+    }
+  ]
 }

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/AaronSwartz0217/UNITY_FIGHTCHRACTER_FLOW_PLUGIN",
+  "defaultBranch": "main",
+  "verifiedCommit": "095dc3c9a0920c221b681f9ecf10508873451a97",
+  "verifiedAt": "2026-09-09",
+  "ownership": {
+    "sourceOfTruth": "external-repository",
+    "vendorIntoWorkflowRepository": false,
+    "copyPluginInventory": false
+  },
+  "environment": {
+    "unity": "2022.3",
+    "optionalPackages": {
+      "humanoidFbxExport": "com.unity.formats.fbx@4.2.1",
+      "glbImport": "com.unity.cloud.gltfast"
+    }
+  },
+  "packages": [
+    {
+      "id": "com.codex.split-rig-retargeter",
+      "version": "1.4.0",
+      "path": "Packages/com.codex.split-rig-retargeter",
+      "role": "Bake split-rig animation onto a Mixamo/Humanoid target",
+      "requiredPaths": [
+        "package.json",
+        "README.md",
+        "USAGE_SPEC.zh-CN.md",
+        "Editor/SplitRigRetargeterWindow.cs",
+        "Editor/SplitRigBaker.cs",
+        "Editor/Data/FinalGujia1RetargetProfile.xml"
+      ],
+      "requiredText": {
+        "Editor/SplitRigRetargeterWindow.cs": [
+          "Split Rig Retargeter 1.4.0 FINAL"
+        ]
+      }
+    },
+    {
+      "id": "com.codex.mixamo-attachment-toolkit",
+      "version": "0.3.0",
+      "path": "Packages/com.codex.mixamo-attachment-toolkit",
+      "role": "Create Mixamo/Humanoid sockets and attach rigid equipment",
+      "requiredPaths": [
+        "package.json",
+        "README.md",
+        "Runtime/AttachmentController.cs",
+        "Runtime/AttachmentItem.cs",
+        "Runtime/AttachmentSocket.cs",
+        "Editor/MixamoAttachmentWindow.cs",
+        "Tests/Editor/SocketCreatorTests.cs"
+      ],
+      "requiredText": {
+        "Runtime/AttachmentController.cs": [
+          "public GameObject Equip(",
+          "public bool Attach(",
+          "public bool Unequip(",
+          "public void SetState("
+        ],
+        "Editor/MixamoAttachmentWindow.cs": [
+          "Tools/Mixamo Attachment Toolkit"
+        ]
+      }
+    }
+  ],
+  "capabilities": {
+    "supported": [
+      "split-rig-animation-retarget-bake",
+      "animation-repair-bake",
+      "humanoid-or-mixamo-bone-resolution",
+      "rigid-equipment-socket-creation",
+      "rigid-equipment-runtime-equip-and-unequip",
+      "attachment-state-pose-offsets",
+      "attachment-ready-prefab-and-fbx-export"
+    ],
+    "notProvided": [
+      "skinned-clothing-swap-system",
+      "automatic-skinned-mesh-bone-rebinding",
+      "automatic-animator-controller-state-wiring",
+      "cloth-or-necklace-physics"
+    ]
+  }
+}

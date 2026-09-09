@@ -18,6 +18,8 @@ Before acting, read these files completely in order:
 
 `glass-spec.md` is the variant override. If the inherited documents conflict with it, the glass specification wins only for glass preset handling, color ownership, glass interior alpha, and URP runtime effects. All other base workflow gates remain mandatory.
 
+When the target UI controls or documents the external Unity fight-character flow, also read `references/fight-character-plugin.md`. Its plugin mode, source-ownership, capability-boundary, and runtime QA gates are mandatory for that integration.
+
 ## Required inputs
 
 Identify and label every input:
@@ -60,6 +62,20 @@ Do not overwrite an existing project.
 13. Use the baked transparent PNG as the UI mask/overlay and `UI/URP Frosted Glass Diffraction` for runtime blur, refraction, and color dispersion.
 14. Complete the white-model-color-to-generated-color comparison, checkerboard, 100%, 400%, reassembly, and two-round QA.
 15. Run `scripts/validate_glass_project.py --project <project> --unity-project <UnityProjectRoot>`.
+
+## Optional external character-flow integration
+
+The compatible Unity packages remain in the external `UNITY_FIGHTCHRACTER_FLOW_PLUGIN` repository. Do not vendor their package inventory into this workflow or into formal UI output.
+
+Before using that integration, run:
+
+```text
+python scripts/check_fight_character_plugin.py \
+  --plugin-repo <LocalPluginRepository> \
+  --report <ProjectId>/QA/FIGHT_CHARACTER_PLUGIN_COMPATIBILITY.json
+```
+
+Treat a generated animation file or saved Prefab as an intermediate result. Completion requires the runtime Animator or attachment behavior described in `references/fight-character-plugin.md` to be visibly verified.
 
 ## Color hard rules
 
