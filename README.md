@@ -89,3 +89,14 @@ python SkillPackage/produce-game-ui-assets/scripts/validate_project.py --project
 ```
 
 每个项目必须包含资产清单、组件坐标、比例循环、按钮文字矩阵、最终 QA 和项目配置。最高标准以 `00_CoreDocs/README_MASTER.md` 为准。
+
+## 毛玻璃专用变体
+
+`IPHONEE_VALID` 分支新增 [`WorkflowVariants/IPhoneGlassUIWorkflow`](WorkflowVariants/IPhoneGlassUIWorkflow/README.md)。该变体专门处理 GLSDD/URP 毛玻璃 UI：
+
+- 随附用户确认的唯一 `毛玻璃.json`；
+- Unity 中固定读取 `Assets/SHADER/玻璃预设/毛玻璃.json`，缺失时阻止烘焙；
+- Tint 和各区域色相强制来自白模；
+- 风格参考只提供材质、倒角、边框、高光、阴影、纹理与磨损；
+- 提供白模区域取色、Unity 包安装、玻璃项目脚手架和专项验证脚本；
+- 不上传白模、风格图、生成图或正式 PNG。

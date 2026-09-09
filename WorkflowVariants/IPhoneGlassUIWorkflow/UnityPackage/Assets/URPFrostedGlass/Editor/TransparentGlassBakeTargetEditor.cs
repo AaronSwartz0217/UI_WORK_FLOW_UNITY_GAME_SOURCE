@@ -1,0 +1,333 @@
+using System.IO;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.UI;
+
+[CustomEditor(typeof(TransparentGlassBakeTarget))]
+public sealed class TransparentGlassBakeTargetEditor : Editor
+{
+    void OnEnable()
+    {
+        TransparentGlassBakeTarget targetComponent = target as TransparentGlassBakeTarget;
+        if (targetComponent == null)
+            return;
+
+        targetComponent.workflowPresetLoaded = GlassWorkflowPolicy.TryLoadRequiredPreset(out GlassUIBakerPreset preset, false);
+        if (targetComponent.workflowPresetLoaded)
+        {
+            targetComponent.ApplyPreset(preset);
+            targetComponent.wireframeTintLoaded = false;
+            targetComponent.wireframeColorSource = "";
+            EditorUtility.SetDirty(targetComponent);
+        }
+    }
+
+    public override void OnInspectorGUI()
+    {
+        serializedObject.Update();
+        EditorGUI.BeginChangeCheck();
+        DrawDefaultInspector();
+        bool changed = EditorGUI.EndChangeCheck();
+        serializedObject.ApplyModifiedProperties();
+
+        TransparentGlassBakeTarget targetComponent = (TransparentGlassBakeTarget)target;
+        if (changed)
+            UpdateScenePreview(targetComponent);
+
+        EditorGUILayout.HelpBox(
+            targetComponent.workflowPresetLoaded
+                ? $"指定预设已读取：{GlassWorkflowPolicy.RequiredPresetAssetPath}"
+                : $"指定预设未读取，烘焙已锁定：{GlassWorkflowPolicy.RequiredPresetAssetPath}",
+            targetComponent.workflowPresetLoaded ? MessageType.Info : MessageType.Error);
+
+        using (new EditorGUI.DisabledScope(true))
+            EditorGUILayout.ColorField("玻璃颜色（来自白模）", targetComponent.tint);
+
+        EditorGUI.BeginChangeCheck();
+        string componentId = EditorGUILayout.TextField("颜色组件 ID", targetComponent.wireframeColorComponentId);
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(targetComponent, "Change Wireframe Color Component");
+            targetComponent.wireframeColorComponentId = componentId;
+            targetComponent.wireframeTintLoaded = false;
+            targetComponent.wireframeColorSource = "";
+            EditorUtility.SetDirty(targetComponent);
+        }
+        if (GUILayout.Button("从白模颜色表应用 Tint", GUILayout.Height(30)) &&
+            GlassWorkflowPolicy.TrySelectWireframeTint(targetComponent.wireframeColorComponentId, out Color selectedTint, out string source))
+        {
+            Undo.RecordObject(targetComponent, "Apply Wireframe Tint");
+            targetComponent.tint = selectedTint;
+            targetComponent.wireframeTintLoaded = true;
+            targetComponent.wireframeColorSource = source;
+            EditorUtility.SetDirty(targetComponent);
+            UpdateScenePreview(targetComponent);
+        }
+        EditorGUILayout.HelpBox(
+            targetComponent.wireframeTintLoaded
+                ? $"Tint 已确认：{targetComponent.wireframeColorSource}"
+                : "必须应用已确认的白模区域颜色，才能烘焙。",
+            targetComponent.wireframeTintLoaded ? MessageType.Info : MessageType.Warning);
+
+        EditorGUILayout.Space(10);
+        EditorGUILayout.LabelField("参数预设", EditorStyles.boldLabel);
+        EditorGUILayout.BeginHorizontal();
+        if (GUILayout.Button("读取指定预设", GUILayout.Height(30)) && GlassWorkflowPolicy.TryLoadRequiredPreset(out GlassUIBakerPreset preset))
+        {
+            Undo.RecordObject(targetComponent, "Load Glass UI Preset");
+            targetComponent.ApplyPreset(preset);
+            targetComponent.workflowPresetLoaded = true;
+            targetComponent.wireframeTintLoaded = false;
+            targetComponent.wireframeColorSource = "";
+            EditorUtility.SetDirty(targetComponent);
+            SceneView.RepaintAll();
+        }
+        if (GUILayout.Button("保存候选预设", GUILayout.Height(30)))
+            GlassWorkflowPolicy.SaveCandidatePreset(targetComponent.CapturePreset(), targetComponent.gameObject.name + "Candidate");
+        EditorGUILayout.EndHorizontal();
+        if (GUILayout.Button("覆盖指定预设（需用户确认）", GUILayout.Height(28)))
+            GlassWorkflowPolicy.SaveApprovedPreset(targetComponent.CapturePreset());
+
+        EditorGUILayout.Space(6);
+        if (GUILayout.Button("重置 Shader 预览参数", GUILayout.Height(30)))
+        {
+            Undo.RecordObject(targetComponent, "Reset Glass Shader Preview");
+            targetComponent.ResetShaderPreviewSettings();
+            EditorUtility.SetDirty(targetComponent);
+        }
+
+        if (GUILayout.Button("按当前 RectTransform 同步输出比例", GUILayout.Height(30)))
+        {
+            Undo.RecordObject(targetComponent, "Sync Glass Bake Aspect");
+            targetComponent.SyncOutputAspectFromRect();
+            EditorUtility.SetDirty(targetComponent);
+        }
+
+        GUI.backgroundColor = new Color(0.52f, 0.82f, 1f);
+        if (GUILayout.Button("烘焙透明 PNG", GUILayout.Height(42)))
+            Bake(targetComponent);
+        GUI.backgroundColor = Color.white;
+
+        if (GUILayout.Button("打开独立拖拽烘焙窗口"))
+            EditorApplication.ExecuteMenuItem("Tools/URP Frosted Glass/Transparent PNG Baker");
+    }
+
+    static void UpdateScenePreview(TransparentGlassBakeTarget targetComponent)
+    {
+        targetComponent.RefreshPreview();
+        targetComponent.UpdateShaderPreview();
+        SceneView.RepaintAll();
+    }
+
+    static void Bake(TransparentGlassBakeTarget settings)
+    {
+        if (!settings.workflowPresetLoaded)
+        {
+            EditorUtility.DisplayDialog("毛玻璃烘焙已停止", "请先读取唯一指定预设。", "OK");
+            return;
+        }
+        if (!settings.wireframeTintLoaded)
+        {
+            EditorUtility.DisplayDialog("毛玻璃烘焙已停止", "请先从白模颜色表应用已确认的 Tint。", "OK");
+            return;
+        }
+
+        const string bakedFolder = "Assets/SHADER/URPFrostedGlass/Baked";
+        EnsureAssetFolder(bakedFolder);
+        string path = EditorUtility.SaveFilePanelInProject(
+            "保存透明毛玻璃 PNG",
+            settings.gameObject.name,
+            "png",
+            "请选择 Assets 内的保存位置",
+            bakedFolder);
+
+        if (string.IsNullOrEmpty(path))
+            return;
+
+        Texture2D texture = TransparentGlassBakeUtility.Render(settings);
+        string projectRoot = Directory.GetParent(Application.dataPath).FullName;
+        File.WriteAllBytes(Path.Combine(projectRoot, path), texture.EncodeToPNG());
+        Object.DestroyImmediate(texture);
+        AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+
+        TextureImporter importer = AssetImporter.GetAtPath(path) as TextureImporter;
+        if (importer != null)
+        {
+            importer.textureType = TextureImporterType.Sprite;
+            importer.spriteImportMode = SpriteImportMode.Single;
+            importer.alphaIsTransparency = true;
+            importer.mipmapEnabled = false;
+            importer.wrapMode = TextureWrapMode.Clamp;
+            importer.SaveAndReimport();
+        }
+
+        Object asset = AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+        Selection.activeObject = asset;
+        EditorGUIUtility.PingObject(asset);
+        Debug.Log($"Baked transparent glass PNG: {path}");
+    }
+
+    static void EnsureAssetFolder(string path)
+    {
+        string current = "Assets";
+        foreach (string part in path.Substring("Assets/".Length).Split('/'))
+        {
+            string next = current + "/" + part;
+            if (!AssetDatabase.IsValidFolder(next))
+                AssetDatabase.CreateFolder(current, part);
+            current = next;
+        }
+    }
+}
+
+static class GlassUIPresetIO
+{
+    const string LastDirectoryKey = "URPFrostedGlass.LastPresetDirectory";
+
+    public static void Save(GlassUIBakerPreset preset, string defaultName)
+    {
+        string directory = EditorPrefs.GetString(LastDirectoryKey, Application.dataPath);
+        if (!Directory.Exists(directory))
+            directory = Application.dataPath;
+
+        string path = EditorUtility.SaveFilePanel(
+            "保存毛玻璃 UI 预设",
+            directory,
+            string.IsNullOrWhiteSpace(defaultName) ? "FrostedGlassPreset" : defaultName,
+            "json");
+        if (string.IsNullOrEmpty(path))
+            return;
+
+        try
+        {
+            File.WriteAllText(path, JsonUtility.ToJson(preset, true));
+            RememberDirectory(path);
+            RefreshIfInsideProject(path);
+            Debug.Log($"Saved frosted glass preset: {path}");
+        }
+        catch (System.Exception exception)
+        {
+            Debug.LogException(exception);
+            EditorUtility.DisplayDialog("保存预设失败", exception.Message, "OK");
+        }
+    }
+
+    public static bool Load(out GlassUIBakerPreset preset)
+    {
+        preset = null;
+        string directory = EditorPrefs.GetString(LastDirectoryKey, Application.dataPath);
+        if (!Directory.Exists(directory))
+            directory = Application.dataPath;
+
+        string path = EditorUtility.OpenFilePanel("读取毛玻璃 UI 预设", directory, "json");
+        if (string.IsNullOrEmpty(path))
+            return false;
+
+        try
+        {
+            preset = JsonUtility.FromJson<GlassUIBakerPreset>(File.ReadAllText(path));
+            if (preset == null || preset.version != 1)
+                throw new InvalidDataException("该文件不是支持的毛玻璃 UI 预设。");
+
+            RememberDirectory(path);
+            Debug.Log($"Loaded frosted glass preset: {path}");
+            return true;
+        }
+        catch (System.Exception exception)
+        {
+            preset = null;
+            Debug.LogException(exception);
+            EditorUtility.DisplayDialog("读取预设失败", exception.Message, "OK");
+            return false;
+        }
+    }
+
+    static void RememberDirectory(string path)
+    {
+        string directory = Path.GetDirectoryName(path);
+        if (!string.IsNullOrEmpty(directory))
+            EditorPrefs.SetString(LastDirectoryKey, directory);
+    }
+
+    static void RefreshIfInsideProject(string path)
+    {
+        string normalizedPath = Path.GetFullPath(path).Replace('\\', '/');
+        string normalizedProject = Path.GetFullPath(Directory.GetParent(Application.dataPath).FullName).Replace('\\', '/').TrimEnd('/') + "/";
+        if (normalizedPath.StartsWith(normalizedProject, System.StringComparison.OrdinalIgnoreCase))
+            AssetDatabase.Refresh();
+    }
+}
+
+static class TransparentGlassBakeUtility
+{
+    public static Texture2D Render(TransparentGlassBakeTarget s)
+    {
+        int width = s.outputWidth;
+        int height = s.outputHeight;
+        Texture2D texture = new Texture2D(width, height, TextureFormat.RGBA32, false, false);
+        Color32[] pixels = new Color32[width * height];
+        Vector2 center = new Vector2(width * 0.5f, height * 0.5f);
+        Vector2 halfSize = center - Vector2.one * 2f;
+        float radius = Mathf.Clamp(s.cornerRadius, 0, Mathf.Min(halfSize.x, halfSize.y));
+        Vector2[] samples =
+        {
+            new Vector2(-0.25f, -0.25f), new Vector2(0.25f, -0.25f),
+            new Vector2(-0.25f, 0.25f), new Vector2(0.25f, 0.25f)
+        };
+
+        for (int y = 0; y < height; y++)
+        {
+            float vertical = y / Mathf.Max(1f, height - 1f);
+            for (int x = 0; x < width; x++)
+            {
+                float coverage = 0;
+                float border = 0;
+                float edge = 0;
+                foreach (Vector2 sample in samples)
+                {
+                    Vector2 p = new Vector2(x + 0.5f + sample.x, y + 0.5f + sample.y) - center;
+                    float sdf = RoundedBoxSdf(p, halfSize, radius);
+                    float inside = Mathf.Clamp01(0.5f - sdf);
+                    coverage += inside;
+                    border += inside * (1f - SmoothStep(Mathf.Max(0, s.borderWidth - 1), s.borderWidth + 1, Mathf.Abs(sdf)));
+                    edge += inside * (1f - SmoothStep(0, Mathf.Max(radius * 0.55f, 1), -sdf));
+                }
+
+                coverage *= 0.25f;
+                border *= 0.25f;
+                edge *= 0.25f;
+                float highlight = (1 - vertical) * edge * s.topHighlight;
+                float shade = vertical * edge * s.bottomShade;
+                float horizontal = x / Mathf.Max(1f, width - 1f);
+                float radians = s.glossAngle * Mathf.Deg2Rad;
+                float glossCoordinate = (horizontal - 0.5f) * Mathf.Sin(radians) + (vertical - 0.5f) * Mathf.Cos(radians) + 0.5f;
+                float glossDistance = Mathf.Abs(glossCoordinate - s.glossPosition);
+                float gloss = (1f - SmoothStep(s.glossWidth * 0.25f, s.glossWidth * 0.5f, glossDistance)) * s.glossIntensity * coverage;
+                float alpha = Mathf.Max(coverage * s.fillOpacity, border * s.borderOpacity);
+                alpha = Mathf.Clamp01(alpha + highlight + gloss - shade);
+
+                if (alpha <= 0.0001f)
+                    pixels[y * width + x] = new Color32(0, 0, 0, 0);
+                else
+                    pixels[y * width + x] = new Color(s.tint.r, s.tint.g, s.tint.b, alpha);
+            }
+        }
+
+        texture.SetPixels32(pixels);
+        texture.Apply(false, false);
+        return texture;
+    }
+
+    static float RoundedBoxSdf(Vector2 p, Vector2 halfSize, float radius)
+    {
+        Vector2 q = new Vector2(Mathf.Abs(p.x), Mathf.Abs(p.y)) - (halfSize - Vector2.one * radius);
+        Vector2 outside = new Vector2(Mathf.Max(q.x, 0), Mathf.Max(q.y, 0));
+        return outside.magnitude + Mathf.Min(Mathf.Max(q.x, q.y), 0) - radius;
+    }
+
+    static float SmoothStep(float a, float b, float value)
+    {
+        float t = Mathf.Clamp01((value - a) / Mathf.Max(b - a, 1e-5f));
+        return t * t * (3 - 2 * t);
+    }
+}

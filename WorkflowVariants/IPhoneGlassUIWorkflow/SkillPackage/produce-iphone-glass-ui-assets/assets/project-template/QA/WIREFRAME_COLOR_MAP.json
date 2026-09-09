@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "Wireframe": "../in/ProjectId_Wireframe_WidthxHeight.ext",
+  "RegionConfig": "../in/ProjectId_WireframeRegions.json",
+  "regions": []
+}

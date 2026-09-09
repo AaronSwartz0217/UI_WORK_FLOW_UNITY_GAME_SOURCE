@@ -1,0 +1,30 @@
+{
+  "name": "IPhoneGlassUIWorkflow",
+  "branch": "IPHONEE_VALID",
+  "extends": "../../SkillPackage/produce-game-ui-assets",
+  "skill": "SkillPackage/produce-iphone-glass-ui-assets/SKILL.md",
+  "canonicalPresetSource": "UnityPackage/Assets/SHADER/玻璃预设/毛玻璃.json",
+  "runtimePreset": "Assets/SHADER/玻璃预设/毛玻璃.json",
+  "unityPackage": "UnityPackage/Assets",
+  "colorPolicy": {
+    "source": "wireframe",
+    "styleReferenceMayOverrideHue": false,
+    "requirePerRegionColor": true,
+    "pendingWhenNeutralOrConflicting": true,
+    "requiredQaFields": [
+      "WireframeSourceColor",
+      "GeneratedColor",
+      "HueDifference",
+      "SaturationAdjustment",
+      "BrightnessAdjustment",
+      "ColorDecision"
+    ]
+  },
+  "glassPolicy": {
+    "presetRequired": true,
+    "allowSilentDefaults": false,
+    "allowAutomaticPresetOverwrite": false,
+    "runtimeShader": "UI/URP Frosted Glass Diffraction",
+    "requiresTrueAlpha": true
+  }
+}

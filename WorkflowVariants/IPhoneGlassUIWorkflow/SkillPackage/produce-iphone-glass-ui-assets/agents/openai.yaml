@@ -1,0 +1,4 @@
+interface:
+  display_name: "白模配色毛玻璃 UI"
+  short_description: "使用统一 GLSDD 预设和白模区域颜色生成、拆分并验证毛玻璃游戏 UI"
+  default_prompt: "Use $produce-iphone-glass-ui-assets to produce the current glass UI from its wireframe colors and the required GLSDD preset."
