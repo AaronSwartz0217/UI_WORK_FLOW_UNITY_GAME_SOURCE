@@ -18,4 +18,20 @@
 - [x] URP Opaque Texture is enabled by the rebuild tool.
 - [x] Formal output contains PNG files only.
 
+## CharacterSetup addendum
+
+- [x] The user's request to split the presented CharacterSetup draft is recorded as the full-UI approval gate.
+- [x] CharacterSetup is separated from LoginScreen by folder and the validator-compatible `LargeLogin_CharacterSetup` filename prefix.
+- [x] The parent panel does not bake in the name input, current-equipment slot, cards, labels, or button.
+- [x] Thirteen CharacterSetup PNGs have exact filename dimensions.
+- [x] Every rounded component is tight-cropped to the straight edges and has alpha 0 only outside its true rounded silhouette.
+- [x] All glass centers remain intentionally translucent and are recorded as `ComponentMaterial: Glass`.
+- [x] Equipment-card `Normal`, `Hover`, `Pressed`, `Disabled`, and `Selected` use one 184×164 canvas and identical alpha silhouette.
+- [x] Enter-game `Normal`, `Hover`, `Pressed`, and `Disabled` use one 368×72 canvas and identical alpha silhouette.
+- [x] CharacterSetup reassembly preview exists at `into/ReassemblyPreview/LargeLoginCharacterSetup_Reassembly_NoText_1464x828.png`.
+- [x] CharacterSetup checkerboard exists at `QA/LargeLoginCharacterSetup_AlphaCheckerboard.png`.
+- [x] Unity 2022.3.62f3c1 compiled and generated the CharacterSetup package.
+- [x] CharacterSetup prefab contains 1 TMP input field, 6 buttons, and 9 `URPFrostedGlassPanel` components.
+- [x] CharacterSetup preview scene contains exactly one EventSystem; its portable prefab contains none.
+
 Result: PASS

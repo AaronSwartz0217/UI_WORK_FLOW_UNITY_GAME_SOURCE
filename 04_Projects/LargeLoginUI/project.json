@@ -36,14 +36,19 @@
       "approvedFullUI": "FullUI/LargeLoginUI_FullUI_Draft_1464x828.png"
     },
     "characterSetup": {
-      "componentPrefix": "LargeLoginCharacterSetup_",
-      "status": "awaiting_full_ui_approval",
+      "componentPrefix": "LargeLogin_CharacterSetup",
+      "status": "complete",
       "wireframe": "in/LargeLoginCharacterSetup_Wireframe_1334x753.jpg",
-      "candidateFullUI": "FullUI/LargeLoginCharacterSetup_FullUI_LayoutMatch_1464x828.png"
+      "approvedFullUI": "FullUI/LargeLoginCharacterSetup_FullUI_LayoutMatch_1464x828.png",
+      "approvalEvidence": "User requested component splitting from the presented layout draft on 2026-09-11.",
+      "prefab": "UnityPackage/Assets/LargeLoginUI/CharacterSetup/Prefabs/LargeLoginCharacterSetup.prefab",
+      "previewScene": "UnityPackage/Assets/LargeLoginUI/CharacterSetup/Scenes/LargeLoginCharacterSetupPreview.unity"
     }
   },
   "prefab": "UnityPackage/Assets/LargeLoginUI/LoginScreen/Prefabs/LargeLoginScreen.prefab",
   "previewScene": "UnityPackage/Assets/LargeLoginUI/LoginScreen/Scenes/LargeLoginPreview.unity",
+  "glassShowcaseScene": "UnityPackage/Assets/UI场景测试/Scenes/UI场景测试.unity",
+  "glassShowcaseBuilder": "UnityPackage/Assets/Editor/UISceneTestProjectBuilder.cs",
   "requiresFullUIApproval": true,
   "fullUIApproved": true,
   "fullUIApprovalDate": "2026-09-11",
@@ -62,7 +67,12 @@
     "runtimeShader": "UI/URP Frosted Glass Diffraction",
     "components": [
       "InputField",
-      "ActionButton"
+      "ActionButton",
+      "CharacterSetupMainPanel",
+      "CharacterSetupNameInput",
+      "CharacterSetupCurrentEquipmentSlot",
+      "CharacterSetupEquipmentCard",
+      "CharacterSetupEnterGameButton"
     ]
   }
 }

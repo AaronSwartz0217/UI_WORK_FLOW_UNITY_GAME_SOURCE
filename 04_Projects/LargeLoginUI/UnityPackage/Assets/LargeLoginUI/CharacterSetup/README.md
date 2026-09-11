@@ -1,7 +1,14 @@
 # CharacterSetup layout
 
-This folder is reserved for the character-name and equipment-selection layout.
+This folder contains the independently generated character-name and equipment-selection layout. Its art, materials, prefab, preview scene and editor builder do not share filenames with `../LoginScreen/`.
 
-Its art, materials, prefab, preview scene, runtime script and editor builder are independent from `../LoginScreen/`. Component filenames use the `LargeLoginCharacterSetup_` prefix and must not reuse login-screen filenames.
+Component filenames use the validator-compatible `LargeLogin_CharacterSetup` prefix. The generated set contains a background, empty main panel, name input, current-equipment slot, five-state reusable equipment card, and four-state enter-game button.
 
-The current full-screen draft is awaiting the required user approval before formal component splitting and Unity prefab generation.
+Unity entry points:
+
+- `Prefabs/LargeLoginCharacterSetup.prefab`
+- `Scenes/LargeLoginCharacterSetupPreview.unity`
+- `Editor/LargeLoginCharacterSetupPrefabBuilder.cs`
+- Menu: `Tools > Large Login UI > Character Setup > Rebuild`
+
+All visible copy is rendered with TextMeshPro. The PNG files contain no baked text or weapon imagery. The prefab contains no EventSystem; the preview scene contains exactly one.
