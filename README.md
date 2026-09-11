@@ -102,3 +102,15 @@ python SkillPackage/produce-game-ui-assets/scripts/validate_project.py --project
 - 不上传白模、风格图、生成图或正式 PNG。
 
 该分支也包含外部 [`UNITY_FIGHTCHRACTER_FLOW_PLUGIN`](https://github.com/AaronSwartz0217/UNITY_FIGHTCHRACTER_FLOW_PLUGIN) 的兼容契约与只读检查器。插件库存继续保存在原插件仓库，本仓库不复制 `Packages/`；动画重定向、刚性装备挂点、换装/蒙皮绑骨和 Animator 套动作的能力边界及运行时验收标准见毛玻璃变体说明。
+
+## 登录界面毛玻璃示例
+
+[`04_Projects/LargeLoginUI`](04_Projects/LargeLoginUI/README.md) 是当前变体的可复用登录界面实现。它不依赖 Cook、装备鉴定或旧工业模板，包含：
+
+- 登录白模与用户确认稿的相对路径记录；
+- 无文字 PNG 的组件清单和按钮四态契约；
+- Unity 2022.3 URP 的可重建 uGUI/TMP 预制体、预览场景和毛玻璃材质；
+- 输入框、按钮、状态接口、颜色对照、回拼和最终 QA；
+- Unity CLI 构建与结构验证记录。
+
+仓库继续遵守图片资源排除策略：Git 保存预制体、材质、Shader、脚本、配置和说明，PNG/JPG 只保留在本地工作文件夹。

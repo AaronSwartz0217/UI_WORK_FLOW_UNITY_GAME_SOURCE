@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "coordinateMode": "normalized",
+  "canvas": {
+    "width": 1464,
+    "height": 828
+  },
+  "regions": [
+    {
+      "componentId": "InputField",
+      "rect": {
+        "x": 0.3962,
+        "y": 0.3466,
+        "width": 0.2077,
+        "height": 0.0652
+      },
+      "required": true
+    },
+    {
+      "componentId": "ActionButton",
+      "rect": {
+        "x": 0.3962,
+        "y": 0.5857,
+        "width": 0.2077,
+        "height": 0.0640
+      },
+      "required": true
+    }
+  ]
+}

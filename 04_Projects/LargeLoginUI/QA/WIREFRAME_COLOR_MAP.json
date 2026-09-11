@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "wireframe": "in/LargeLoginUI_Wireframe_1464x828.jpg",
+  "approvalEvidence": "FullUI/LargeLoginUI_FullUI_Draft_1464x828.png",
+  "approvalDate": "2026-09-11",
+  "regions": [
+    {
+      "ComponentId": "InputField",
+      "WireframeSourceColor": {
+        "r": 0.6157,
+        "g": 0.6157,
+        "b": 0.6157,
+        "a": 1.0
+      },
+      "GeneratedColor": {
+        "r": 0.7804,
+        "g": 0.7216,
+        "b": 0.6392,
+        "a": 1.0
+      },
+      "HueDifference": 0.0,
+      "SaturationAdjustment": 0.16,
+      "BrightnessAdjustment": 0.098,
+      "ColorDecision": "Confirmed",
+      "DecisionReason": "Neutral source resolved by the login screen's black-gold context and the user-approved complete draft."
+    },
+    {
+      "ComponentId": "ActionButton",
+      "WireframeSourceColor": {
+        "r": 0.9608,
+        "g": 0.9608,
+        "b": 0.9608,
+        "a": 1.0
+      },
+      "GeneratedColor": {
+        "r": 0.9608,
+        "g": 0.8000,
+        "b": 0.5608,
+        "a": 1.0
+      },
+      "HueDifference": 0.0,
+      "SaturationAdjustment": 0.42,
+      "BrightnessAdjustment": -0.01,
+      "ColorDecision": "Confirmed",
+      "DecisionReason": "Warm amber glass was explicitly accepted in the complete login UI draft."
+    }
+  ]
+}

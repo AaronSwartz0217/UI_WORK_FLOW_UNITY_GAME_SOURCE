@@ -1,0 +1,51 @@
+{
+  "projectDisplayName": "大型登录界面",
+  "projectId": "LargeLoginUI",
+  "componentPrefix": "LargeLogin",
+  "workflowVariant": "IPhoneGlassUIWorkflow",
+  "status": "complete",
+  "wireframe": "in/LargeLoginUI_Wireframe_1464x828.jpg",
+  "wireframeRegionConfig": "in/LargeLoginUI_WireframeRegions.json",
+  "approvedFullUI": "FullUI/LargeLoginUI_FullUI_Draft_1464x828.png",
+  "styleReferences": [],
+  "visualAuthority": {
+    "layoutAndColor": "in/LargeLoginUI_Wireframe_1464x828.jpg",
+    "approvedMaterialDraft": "FullUI/LargeLoginUI_FullUI_Draft_1464x828.png",
+    "excludedLegacyTemplates": [
+      "Cook",
+      "Equipment identification",
+      "legacy shared industrial templates"
+    ]
+  },
+  "canvas": {
+    "width": 1464,
+    "height": 828,
+    "scaleX": 1.0,
+    "scaleY": 1.0
+  },
+  "formalOutput": "Components/out/LargeLoginUI",
+  "unityPackage": "UnityPackage/Assets",
+  "prefab": "UnityPackage/Assets/LargeLoginUI/Prefabs/LargeLoginScreen.prefab",
+  "previewScene": "UnityPackage/Assets/LargeLoginUI/Scenes/LargeLoginPreview.unity",
+  "requiresFullUIApproval": true,
+  "fullUIApproved": true,
+  "fullUIApprovalDate": "2026-09-11",
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true,
+  "glass": {
+    "enabled": true,
+    "preset": "Assets/SHADER/玻璃预设/毛玻璃.json",
+    "presetSha256": "D7C069A5D88F1F07EF92AE40421E46E0552136B73B4ED267AB9017CA79C2D176",
+    "colorSource": "wireframe",
+    "colorMap": "QA/WIREFRAME_COLOR_MAP.json",
+    "styleReferenceMayOverrideHue": false,
+    "maxHueDifferenceDegrees": 12.0,
+    "runtimeShader": "UI/URP Frosted Glass Diffraction",
+    "components": [
+      "InputField",
+      "ActionButton"
+    ]
+  }
+}
