@@ -29,18 +29,20 @@ Unity 内容位于：
 
 主要入口：
 
-- 预制体：`UnityPackage/Assets/LargeLoginUI/Prefabs/LargeLoginScreen.prefab`
-- 预览场景：`UnityPackage/Assets/LargeLoginUI/Scenes/LargeLoginPreview.unity`
-- 输入框材质：`UnityPackage/Assets/LargeLoginUI/Materials/LargeLogin_GlassInput.mat`
-- 按钮材质：`UnityPackage/Assets/LargeLoginUI/Materials/LargeLogin_GlassButton.mat`
+- 账号登录版式：`UnityPackage/Assets/LargeLoginUI/LoginScreen/`
+- 角色创建与装备选择版式：`UnityPackage/Assets/LargeLoginUI/CharacterSetup/`
+- 登录预制体：`UnityPackage/Assets/LargeLoginUI/LoginScreen/Prefabs/LargeLoginScreen.prefab`
+- 登录预览场景：`UnityPackage/Assets/LargeLoginUI/LoginScreen/Scenes/LargeLoginPreview.unity`
+- 登录输入框材质：`UnityPackage/Assets/LargeLoginUI/LoginScreen/Materials/LargeLogin_GlassInput.mat`
+- 登录按钮材质：`UnityPackage/Assets/LargeLoginUI/LoginScreen/Materials/LargeLogin_GlassButton.mat`
 - 实时 Shader：`UnityPackage/Assets/URPFrostedGlass/URPFrostedGlassUI.shader`
-- 重建工具：`UnityPackage/Assets/LargeLoginUI/Editor/LargeLoginPrefabBuilder.cs`
+- 登录版式重建工具：`UnityPackage/Assets/LargeLoginUI/LoginScreen/Editor/LargeLoginPrefabBuilder.cs`
 
 把 `UnityPackage/Assets` 合并到 Unity 2022.3 URP 项目的 `Assets` 后，执行：
 
-`Tools > Large Login UI > Rebuild Glass Login`
+`Tools > Large Login UI > Login Screen > Rebuild`
 
-重建工具会读取固定预设、生成透明组件、创建材质与预制体，并打开 URP Opaque Texture。登录验证、账号存储和场景切换不在本 UI 包内；`LargeLoginScreenView` 只提供登录/注册事件和状态文本接口。
+两个版式使用不同的图片文件名、组件目录和预制体目录。重建工具会读取固定预设、生成透明组件、创建材质与预制体，并打开 URP Opaque Texture。登录验证、账号存储和场景切换不在本 UI 包内；`LargeLoginScreenView` 只提供登录/注册事件和状态文本接口。
 
 发布前请给 TMP 配置项目自己的中文字体与 fallback 链。PNG 中没有烘焙字体。
 

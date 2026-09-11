@@ -15,7 +15,7 @@ namespace LargeLoginUIEditor
 {
     public static class LargeLoginPrefabBuilder
     {
-        const string Root = "Assets/LargeLoginUI";
+        const string Root = "Assets/LargeLoginUI/LoginScreen";
         const string Art = Root + "/Art";
         const string Materials = Root + "/Materials";
         const string Prefabs = Root + "/Prefabs";
@@ -26,7 +26,7 @@ namespace LargeLoginUIEditor
         const int CanvasHeight = 828;
         static readonly Vector2 ControlSize = new Vector2(312f, 56f);
 
-        [MenuItem("Tools/Large Login UI/Rebuild Glass Login")]
+        [MenuItem("Tools/Large Login UI/Login Screen/Rebuild")]
         public static void Build()
         {
             EnsureFolders();

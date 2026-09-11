@@ -25,8 +25,25 @@
   },
   "formalOutput": "Components/out/LargeLoginUI",
   "unityPackage": "UnityPackage/Assets",
-  "prefab": "UnityPackage/Assets/LargeLoginUI/Prefabs/LargeLoginScreen.prefab",
-  "previewScene": "UnityPackage/Assets/LargeLoginUI/Scenes/LargeLoginPreview.unity",
+  "screens": {
+    "loginScreen": "UnityPackage/Assets/LargeLoginUI/LoginScreen",
+    "characterSetup": "UnityPackage/Assets/LargeLoginUI/CharacterSetup"
+  },
+  "screenProduction": {
+    "loginScreen": {
+      "componentPrefix": "LargeLogin_",
+      "status": "complete",
+      "approvedFullUI": "FullUI/LargeLoginUI_FullUI_Draft_1464x828.png"
+    },
+    "characterSetup": {
+      "componentPrefix": "LargeLoginCharacterSetup_",
+      "status": "awaiting_full_ui_approval",
+      "wireframe": "in/LargeLoginCharacterSetup_Wireframe_1334x753.jpg",
+      "candidateFullUI": "FullUI/LargeLoginCharacterSetup_FullUI_LayoutMatch_1464x828.png"
+    }
+  },
+  "prefab": "UnityPackage/Assets/LargeLoginUI/LoginScreen/Prefabs/LargeLoginScreen.prefab",
+  "previewScene": "UnityPackage/Assets/LargeLoginUI/LoginScreen/Scenes/LargeLoginPreview.unity",
   "requiresFullUIApproval": true,
   "fullUIApproved": true,
   "fullUIApprovalDate": "2026-09-11",
