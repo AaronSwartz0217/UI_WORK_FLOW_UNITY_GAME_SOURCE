@@ -43,7 +43,7 @@ Result: PASS
 - [x] The test scene accepts any non-empty account/password pair, then cross-fades to CharacterSelectionScreen.
 - [x] A real account service can call `NotifyLoginSucceeded()` or `NotifyLoginFailed(string)`.
 - [x] Source Han Sans SC is embedded as a dynamic TMP font; the scene has 43 serialized references to the CJK font asset.
-- [x] Runtime structure validation reports 2 login inputs, 1 character input, 8 buttons, 13 glass panels, 13 soft-glow layers and 1 EventSystem.
+- [x] Runtime structure validation reports 2 login inputs, 1 character input, 8 buttons, 13 glass panels, 0 added soft-glow outline layers and 1 EventSystem.
 - [x] URP HDR, Opaque Texture, Bloom and ACES are enabled by the builder.
-- [x] Glass intensity was reduced after runtime review: narrow inner highlight, lower exposure, restrained Bloom, and a low-opacity deterministic soft-glow layer.
+- [x] The added `_EdgeGlow` and `_SoftGlow` outline treatment was removed after runtime review; the original glass refraction, rounded transition, restrained material gloss and Bloom remain.
 - [x] Final screenshot comparison remains a manual user acceptance step.

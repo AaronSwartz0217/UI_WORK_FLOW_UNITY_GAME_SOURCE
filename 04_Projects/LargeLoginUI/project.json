@@ -59,7 +59,7 @@
     "characterInputs": 1,
     "buttons": 8,
     "glassPanels": 13,
-    "softGlowLayers": 13,
+    "softGlowLayers": 0,
     "eventSystems": 1,
     "hdr": true,
     "bloom": true,

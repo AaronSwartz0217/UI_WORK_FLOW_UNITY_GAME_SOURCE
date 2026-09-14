@@ -23,8 +23,9 @@ Runtime rendering requirements:
 
 The Source Han Sans SC dynamic SDF asset is included so Chinese UI does not rely
 on `LiberationSans SDF` or a machine-local font. The glass preset remains unchanged;
-the flow scene adds a reduced HDR highlight, subtle Bloom, and one low-opacity
-soft-glow layer per glass panel for consistent Play Mode visibility.
+the flow scene keeps subtle Bloom and the material's restrained surface gloss.
+Added `_EdgeGlow` and duplicate `_SoftGlow` outline layers are disabled so the
+rounded glass edge transitions naturally.
 
 Automated checks validate structure and feature wiring. Final screenshot comparison
 is intentionally manual.

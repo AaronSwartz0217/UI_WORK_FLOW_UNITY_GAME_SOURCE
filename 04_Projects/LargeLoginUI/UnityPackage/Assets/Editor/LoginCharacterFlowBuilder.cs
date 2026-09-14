@@ -15,7 +15,7 @@ using UnityEngine.TextCore.LowLevel;
 
 public static class LoginCharacterFlowBuilder
 {
-    // Rebuilds deterministic runtime visuals; screenshot QA remains manual.
+    // Rebuilds deterministic runtime visuals; final screenshot QA remains manual.
     const string Root = "Assets/UI场景测试";
     const string ScenePath = Root + "/Scenes/LoginCharacterFlow.unity";
     const string MaterialPath = Root + "/Materials/LoginCharacterFlow_BackgroundOpaque.mat";
@@ -68,8 +68,6 @@ public static class LoginCharacterFlowBuilder
         CanvasGroup characterGroup = ConfigureCanvas(characterRoot, camera, 10);
         AssignCjkFont(loginRoot, cjkFontAsset);
         AssignCjkFont(characterRoot, cjkFontAsset);
-        CreateRuntimeGlowLayers(loginRoot);
-        CreateRuntimeGlowLayers(characterRoot);
         characterRoot.SetActive(false);
 
         GameObject eventSystem = new GameObject(
@@ -385,15 +383,13 @@ public static class LoginCharacterFlowBuilder
                 material.shader.name != GlassShaderName)
                 continue;
 
-            float glow = material.name.Contains("MainPanel") ? 0.42f : 0.52f;
-            float width = material.name.Contains("MainPanel") ? 7f : 5.5f;
             float sheen = material.name.Contains("Input") ? 0.16f : 0.22f;
 
-            material.SetFloat("_EdgeGlow", glow);
-            material.SetFloat("_EdgeGlowWidth", width);
+            material.SetFloat("_EdgeGlow", 0f);
+            material.SetFloat("_EdgeGlowWidth", 1f);
             material.SetColor(
                 "_EdgeGlowColor",
-                new Color(1.12f, 0.78f, 0.46f, 1f));
+                new Color(1.12f, 0.78f, 0.46f, 0f));
             material.SetFloat("_SpecularSheen", sheen);
             material.SetFloat("_Exposure", 1.28f);
             material.SetFloat("_SpriteOverlay", 0.10f);
@@ -401,48 +397,49 @@ public static class LoginCharacterFlowBuilder
         }
     }
 
-    static void CreateRuntimeGlowLayers(GameObject root)
+    [MenuItem("Tools/UI Scene Test/Remove Added Glass Outline Layers")]
+    public static void RemoveAddedOutlineLayers()
     {
-        URPFrostedGlassPanel[] panels =
-            root.GetComponentsInChildren<URPFrostedGlassPanel>(true);
-        foreach (URPFrostedGlassPanel panel in panels)
+        Scene scene = SceneManager.GetActiveScene();
+        if (!scene.IsValid() || scene.path != ScenePath)
+            scene = EditorSceneManager.OpenScene(ScenePath, OpenSceneMode.Single);
+
+        int removed = 0;
+        foreach (GameObject rootObject in scene.GetRootGameObjects())
         {
-            UnityEngine.UI.Image source = panel.GetComponent<UnityEngine.UI.Image>();
-            RectTransform sourceRect = panel.GetComponent<RectTransform>();
-            if (source == null || sourceRect == null || source.sprite == null)
-                continue;
+            Transform[] transforms = rootObject.GetComponentsInChildren<Transform>(true);
+            for (int i = transforms.Length - 1; i >= 0; i--)
+            {
+                Transform transform = transforms[i];
+                if (!transform.name.EndsWith("_SoftGlow", StringComparison.Ordinal))
+                    continue;
 
-            bool isMainPanel = panel.name.IndexOf(
-                "MainPanel",
-                StringComparison.OrdinalIgnoreCase) >= 0;
-            float padding = isMainPanel ? 14f : 8f;
-            float alpha = isMainPanel ? 0.045f : 0.075f;
-
-            GameObject glowObject = new GameObject(
-                panel.name + "_SoftGlow",
-                typeof(RectTransform),
-                typeof(CanvasRenderer),
-                typeof(UnityEngine.UI.Image));
-            RectTransform glowRect = glowObject.GetComponent<RectTransform>();
-            glowRect.SetParent(sourceRect.parent, false);
-            glowRect.anchorMin = sourceRect.anchorMin;
-            glowRect.anchorMax = sourceRect.anchorMax;
-            glowRect.anchoredPosition = sourceRect.anchoredPosition;
-            glowRect.sizeDelta = sourceRect.sizeDelta + Vector2.one * padding * 2f;
-            glowRect.pivot = sourceRect.pivot;
-            glowRect.localRotation = sourceRect.localRotation;
-            glowRect.localScale = sourceRect.localScale;
-            glowRect.SetSiblingIndex(sourceRect.GetSiblingIndex());
-
-            UnityEngine.UI.Image glow = glowObject.GetComponent<UnityEngine.UI.Image>();
-            glow.sprite = source.sprite;
-            glow.type = source.type;
-            glow.fillCenter = true;
-            glow.pixelsPerUnitMultiplier = source.pixelsPerUnitMultiplier;
-            glow.preserveAspect = source.preserveAspect;
-            glow.raycastTarget = false;
-            glow.color = new Color(1f, 0.70f, 0.36f, alpha);
+                UnityEngine.Object.DestroyImmediate(transform.gameObject);
+                removed++;
+            }
         }
+
+        TuneGlassMaterials();
+        EditorSceneManager.MarkSceneDirty(scene);
+        EditorSceneManager.SaveScene(scene, ScenePath);
+        AssetDatabase.SaveAssets();
+
+        int remaining = 0;
+        foreach (GameObject rootObject in scene.GetRootGameObjects())
+        {
+            foreach (Transform transform in rootObject.GetComponentsInChildren<Transform>(true))
+            {
+                if (transform.name.EndsWith("_SoftGlow", StringComparison.Ordinal))
+                    remaining++;
+            }
+        }
+
+        if (remaining != 0)
+            throw new InvalidDataException("Added soft-glow outline layers remain in the scene.");
+
+        Debug.Log(
+            "[LoginCharacterFlow] OUTLINE_REMOVAL_PASS removed=" + removed +
+            " edgeGlow=0 softGlows=0 bloom=preserved");
     }
 
     static void ConfigureBuildSettings()
@@ -510,8 +507,8 @@ public static class LoginCharacterFlowBuilder
             throw new InvalidDataException("Expected eight buttons across both screens.");
         if (glassPanelCount != 13)
             throw new InvalidDataException("Expected thirteen runtime glass panels.");
-        if (softGlowCount != glassPanelCount)
-            throw new InvalidDataException("Every glass panel must have one subtle soft-glow layer.");
+        if (softGlowCount != 0)
+            throw new InvalidDataException("Added soft-glow outline layers must not exist.");
         if (eventSystemCount != 1)
             throw new InvalidDataException("Flow scene must contain exactly one EventSystem.");
         if (flow == null || loginRoot.GetComponent<LargeLoginScreenView>() == null)
@@ -526,7 +523,7 @@ public static class LoginCharacterFlowBuilder
 
         Debug.Log(
             "[LoginCharacterFlow] VALIDATION_PASS loginInputs=2 characterInputs=1 " +
-            "buttons=8 glassPanels=13 softGlows=13 eventSystems=1 " +
+            "buttons=8 glassPanels=13 softGlows=0 eventSystems=1 " +
             "hdr=enabled bloom=enabled");
     }
 
@@ -603,6 +600,58 @@ static class CodexApplyLoginCharacterFlowOnce
                 "Assets/UI场景测试/Scenes/LoginCharacterFlow.unity");
             File.Delete(RequestPath);
             Debug.Log("[CodexLoginCharacterFlow] AUTO_BUILD_SUCCESS");
+        }
+        catch (Exception exception)
+        {
+            File.WriteAllText(FailurePath, exception.ToString());
+            File.Delete(RequestPath);
+            Debug.LogException(exception);
+        }
+    }
+}
+
+[InitializeOnLoad]
+static class CodexRemoveGlassOutlineOnce
+{
+    const string RequestPath = "Library/CodexRemoveGlassOutline.request";
+    const string SuccessPath = "Library/CodexRemoveGlassOutline.success";
+    const string FailurePath = "Library/CodexRemoveGlassOutline.failure";
+
+    static CodexRemoveGlassOutlineOnce()
+    {
+        if (File.Exists(RequestPath))
+            EditorApplication.delayCall += TryRemove;
+    }
+
+    static void TryRemove()
+    {
+        if (!File.Exists(RequestPath))
+            return;
+
+        if (EditorApplication.isCompiling || EditorApplication.isUpdating)
+        {
+            EditorApplication.delayCall += TryRemove;
+            return;
+        }
+
+        if (EditorApplication.isPlayingOrWillChangePlaymode)
+        {
+            EditorApplication.isPlaying = false;
+            EditorApplication.delayCall += TryRemove;
+            return;
+        }
+
+        try
+        {
+            if (File.Exists(SuccessPath))
+                File.Delete(SuccessPath);
+            if (File.Exists(FailurePath))
+                File.Delete(FailurePath);
+
+            LoginCharacterFlowBuilder.RemoveAddedOutlineLayers();
+            File.WriteAllText(SuccessPath, DateTime.UtcNow.ToString("O"));
+            File.Delete(RequestPath);
+            Debug.Log("[CodexRemoveGlassOutline] AUTO_REMOVE_SUCCESS");
         }
         catch (Exception exception)
         {

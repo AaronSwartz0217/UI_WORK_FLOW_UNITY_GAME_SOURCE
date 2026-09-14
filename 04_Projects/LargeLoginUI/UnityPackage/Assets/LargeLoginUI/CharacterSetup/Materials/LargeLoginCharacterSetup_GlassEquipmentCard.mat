@@ -37,8 +37,8 @@ Material:
     - _ColorMask: 15
     - _CornerRadius: 15
     - _Diffraction: 0
-    - _EdgeGlow: 0.52
-    - _EdgeGlowWidth: 5.5
+    - _EdgeGlow: 0
+    - _EdgeGlowWidth: 1
     - _Exposure: 1.28
     - _Inset: 2
     - _LensPower: 24
@@ -61,7 +61,7 @@ Material:
     - _TopHighlight: 0.31
     m_Colors:
     - _BorderColor: {r: 0.82, g: 0.7, b: 0.52, a: 0.24}
-    - _EdgeGlowColor: {r: 1.12, g: 0.78, b: 0.46, a: 1}
+    - _EdgeGlowColor: {r: 1.12, g: 0.78, b: 0.46, a: 0}
     - _RectSize: {r: 184, g: 164, b: 0, a: 0}
     - _TintColor: {r: 0.82, g: 0.7, b: 0.52, a: 0.25}
   m_BuildTextureStacks: []

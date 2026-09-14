@@ -33,6 +33,6 @@ The two layouts use separate art, material, prefab, scene, script, and editor fo
 
 The integrated scene includes a self-contained Source Han Sans SC dynamic TMP font, two editable login fields, Enter-to-submit, a test-only non-empty credential check, and a cross-fade into the character-selection screen. Replace the demo acceptance path with the host game's account service before shipping. `NotifyLoginSucceeded()` and `NotifyLoginFailed(string)` are the integration callbacks.
 
-Runtime glass lighting uses a narrow HDR inner highlight, one low-opacity soft-glow layer per glass panel, and restrained URP Bloom/ACES. The soft-glow layer keeps the edge response visible when Bloom contribution differs between editor and player; Bloom is intentionally subtle.
+Runtime glass lighting keeps the original rounded glass transition, subtle material gloss, and restrained URP Bloom/ACES. No duplicate soft-glow object or added edge-outline pass is used, so the panel edge fades naturally instead of reading as a stroke.
 
 The glass shader requires URP Opaque Texture. The rebuild command enables it on URP assets found in the current project.
