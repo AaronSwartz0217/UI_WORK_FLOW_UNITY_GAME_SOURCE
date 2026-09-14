@@ -70,6 +70,11 @@
     "enterGameBinding": "CharacterSelectionScreen/EnterGameButton -> MainHUDScreen",
     "mainHudBackground": "transparent for future 3D scene",
     "mainHudGlassCenterAlpha": 64,
+    "mainHudRuntimeOutputAlphaCaps": {
+      "panelAndMinimap": 0.13,
+      "hotbarSlot": 0.14,
+      "button": 0.16
+    },
     "visualScreenshotApproval": "manual"
   },
   "requiresFullUIApproval": true,

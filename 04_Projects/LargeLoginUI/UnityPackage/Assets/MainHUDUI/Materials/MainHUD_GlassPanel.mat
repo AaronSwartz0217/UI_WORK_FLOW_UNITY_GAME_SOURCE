@@ -47,6 +47,7 @@ Material:
     - _MaskSoftness: 0.035
     - _MaskThreshold: 0.02
     - _Opacity: 0.78
+    - _OutputAlpha: 0.13
     - _Refraction: 12
     - _RefractionEdgeWidth: 1
     - _Saturation: 1

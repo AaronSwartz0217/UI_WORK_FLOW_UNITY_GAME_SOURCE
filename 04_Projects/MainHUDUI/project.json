@@ -59,6 +59,11 @@
     "path": "Components/out/MainHUDUI",
     "pngCount": 57,
     "glassSurfaceAlpha": "center approximately 64/255, synchronized with login and character screens",
+    "runtimeOutputAlphaCaps": {
+      "panelAndMinimap": 0.13,
+      "hotbarSlot": 0.14,
+      "button": 0.16
+    },
     "functionalFills": "opaque for readability",
     "buttonFamilies": 9,
     "buttonStatePolicy": "Normal/Hover/Pressed/Disabled; Hotbar also has Selected",

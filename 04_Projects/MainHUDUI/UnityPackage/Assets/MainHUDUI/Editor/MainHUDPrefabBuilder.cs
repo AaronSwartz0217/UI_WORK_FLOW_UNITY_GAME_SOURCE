@@ -47,19 +47,22 @@ public static class MainHUDPrefabBuilder
             shader,
             preset,
             new Color(0.12f, 0.25f, 0.36f, 0.15f),
-            0.08f);
+            0.08f,
+            0.13f);
         Material buttonMaterial = CreateGlassMaterial(
             Materials + "/MainHUD_GlassButton.mat",
             shader,
             preset,
             new Color(0.39f, 0.56f, 0.72f, 0.11f),
-            0.07f);
+            0.07f,
+            0.16f);
         Material slotMaterial = CreateGlassMaterial(
             Materials + "/MainHUD_GlassSlot.mat",
             shader,
             preset,
             new Color(0.10f, 0.23f, 0.34f, 0.12f),
-            0.06f);
+            0.06f,
+            0.14f);
 
         TMP_FontAsset font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(FontPath);
         if (font == null)
@@ -396,7 +399,8 @@ public static class MainHUDPrefabBuilder
         Shader shader,
         GlassUIBakerPreset preset,
         Color tint,
-        float spriteOverlay)
+        float spriteOverlay,
+        float outputAlpha)
     {
         Material material = AssetDatabase.LoadAssetAtPath<Material>(path);
         if (material == null)
@@ -411,6 +415,7 @@ public static class MainHUDPrefabBuilder
 
         material.SetColor("_TintColor", tint);
         material.SetFloat("_Opacity", Mathf.Min(preset.shaderEffectOpacity, 0.78f));
+        material.SetFloat("_OutputAlpha", outputAlpha);
         material.SetFloat("_MaskThreshold", 0.02f);
         material.SetFloat("_MaskSoftness", 0.035f);
         material.SetFloat("_SpriteOverlay", spriteOverlay);

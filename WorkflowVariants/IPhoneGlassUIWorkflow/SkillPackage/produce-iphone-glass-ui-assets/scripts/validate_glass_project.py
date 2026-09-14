@@ -116,8 +116,11 @@ def main() -> None:
         if RUNTIME_SHADER not in shader_source:
             errors.append(f"URP shader does not declare {RUNTIME_SHADER}")
         if "half sourceAlpha = saturate(bakedSprite.a);" not in shader_source or \
-                "effectMask * sourceAlpha * input.color.a" not in shader_source:
-            errors.append("URP glass shader must preserve source PNG alpha and uGUI Image color alpha")
+                "min(sourceAlpha, _OutputAlpha)" not in shader_source or \
+                "* input.color.a" not in shader_source:
+            errors.append("URP glass shader must preserve source PNG alpha, its output-alpha cap, and uGUI Image color alpha")
+        if "_OutputAlpha (\"Maximum Rendered Opacity\"" not in shader_source:
+            errors.append("URP glass shader must expose Maximum Rendered Opacity")
         if "half alpha = effectMask * input.color.a;" in shader_source:
             errors.append("URP glass shader still forces the valid glass mask to solid alpha")
 

@@ -59,7 +59,7 @@ Do not overwrite an existing project.
 10. Treat any other parameter edit as an in-memory candidate. Do not overwrite the approved preset without explicit user confirmation.
 11. Generate one complete UI and stop for full-UI approval.
 12. After approval, split components and follow the base true-alpha, state-family, hierarchy, crop, reassembly, and output rules.
-13. Use the baked transparent PNG as the UI mask/overlay and `UI/URP Frosted Glass Diffraction` for runtime blur, refraction, and color dispersion. The shader output alpha must preserve `bakedSprite.a * input.color.a`; never remap the valid glass area to solid alpha.
+13. Use the baked transparent PNG as the UI mask/overlay and `UI/URP Frosted Glass Diffraction` for runtime blur, refraction, and color dispersion. The shader output alpha must preserve the lower of `bakedSprite.a` and `_OutputAlpha`, then multiply by `input.color.a`; never remap the valid glass area to solid alpha.
 14. Complete the white-model-color-to-generated-color comparison, checkerboard, 100%, 400%, reassembly, and two-round QA.
 15. Run `scripts/validate_glass_project.py --project <project> --unity-project <UnityProjectRoot>`.
 
@@ -87,7 +87,7 @@ Treat a generated animation file or saved Prefab as an intermediate result. Comp
 
 ## Alpha exception scope
 
-Only components explicitly marked `ComponentMaterial: Glass` may use intentional semi-transparent interiors. Non-glass buttons and slots keep Alpha `255` in their safe interior. Every component still requires true Alpha `0` outside its real silhouette. Unity runtime QA must confirm that the Shader preserves the PNG alpha and that lowering uGUI `Image.color.a` further lowers the rendered opacity.
+Only components explicitly marked `ComponentMaterial: Glass` may use intentional semi-transparent interiors. Non-glass buttons and slots keep Alpha `255` in their safe interior. Every component still requires true Alpha `0` outside its real silhouette. Unity runtime QA must confirm that the Shader preserves the PNG alpha, obeys `_OutputAlpha` as a maximum, and that lowering uGUI `Image.color.a` further lowers the rendered opacity.
 
 ## Formal output
 

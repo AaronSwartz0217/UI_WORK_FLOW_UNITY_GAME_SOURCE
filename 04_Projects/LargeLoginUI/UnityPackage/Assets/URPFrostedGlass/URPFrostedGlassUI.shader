@@ -5,6 +5,7 @@ Shader "UI/URP Frosted Glass Diffraction"
         [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
         _TintColor ("Glass Tint", Color) = (0.92, 0.97, 1.0, 0.16)
         _Opacity ("Glass Effect Strength", Range(0, 1)) = 0.72
+        _OutputAlpha ("Maximum Rendered Opacity", Range(0, 1)) = 1.0
         _MaskThreshold ("PNG Alpha Mask Threshold", Range(0, 0.5)) = 0.025
         _MaskSoftness ("PNG Alpha Mask Softness", Range(0.001, 0.25)) = 0.03
         _SpriteOverlay ("Baked PNG Overlay", Range(0, 1)) = 0.22
@@ -107,6 +108,7 @@ Shader "UI/URP Frosted Glass Diffraction"
                 half4 _EdgeGlowColor;
                 float4 _RectSize;
                 half _Opacity;
+                half _OutputAlpha;
                 half _MaskThreshold;
                 half _MaskSoftness;
                 half _SpriteOverlay;
@@ -287,7 +289,7 @@ Shader "UI/URP Frosted Glass Diffraction"
                 glass = lerp(glass, bakedSprite.rgb, artwork);
 
                 half sourceAlpha = saturate(bakedSprite.a);
-                half alpha = effectMask * sourceAlpha * input.color.a;
+                half alpha = effectMask * min(sourceAlpha, _OutputAlpha) * input.color.a;
                 return half4(glass * input.color.rgb, alpha);
             }
             ENDHLSL

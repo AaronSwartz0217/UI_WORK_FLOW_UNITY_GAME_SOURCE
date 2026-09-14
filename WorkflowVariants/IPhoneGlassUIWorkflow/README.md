@@ -116,7 +116,7 @@ python SkillPackage/produce-iphone-glass-ui-assets/scripts/validate_glass_projec
 - Tint 只能从当前白模区域的已确认颜色记录应用。
 - 未经用户明确确认，不得覆盖全局 `毛玻璃.json`。
 - 透明 PNG 只保存遮罩、透明色和表面光泽；实时模糊、折射与色散由 URP Shader 完成。
-- 运行时 Shader 必须保留 PNG 的源 Alpha，并继续乘以 uGUI `Image.color.a`；不得把玻璃有效区域重新输出为 Alpha `1`。
+- 运行时 Shader 必须保留 PNG 的源 Alpha，并继续乘以 uGUI `Image.color.a`；`Maximum Rendered Opacity` 可作为明确的运行时上限，不得把玻璃有效区域重新输出为 Alpha `1`。
 - 玻璃组件允许设计所需的半透明内部；非玻璃按钮和槽位继续执行内部安全区 Alpha `255` 的基础规则。
 
 ## 外部角色插件适配
