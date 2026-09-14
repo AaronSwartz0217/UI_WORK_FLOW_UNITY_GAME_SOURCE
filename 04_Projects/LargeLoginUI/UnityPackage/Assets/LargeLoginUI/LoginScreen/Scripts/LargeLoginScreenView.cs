@@ -54,6 +54,8 @@ namespace LargeLoginUI
                 loginButton.onClick.AddListener(OnLoginClicked);
             if (registerButton != null)
                 registerButton.onClick.AddListener(OnRegisterClicked);
+            if (passwordInput != null)
+                passwordInput.onSubmit.AddListener(OnPasswordSubmitted);
         }
 
         void RemoveListeners()
@@ -62,6 +64,8 @@ namespace LargeLoginUI
                 loginButton.onClick.RemoveListener(OnLoginClicked);
             if (registerButton != null)
                 registerButton.onClick.RemoveListener(OnRegisterClicked);
+            if (passwordInput != null)
+                passwordInput.onSubmit.RemoveListener(OnPasswordSubmitted);
         }
 
         void OnLoginClicked()
@@ -72,6 +76,20 @@ namespace LargeLoginUI
         void OnRegisterClicked()
         {
             RegisterRequested?.Invoke();
+        }
+
+        void OnPasswordSubmitted(string _)
+        {
+            OnLoginClicked();
+        }
+
+        public void FocusAccountInput()
+        {
+            if (accountInput == null)
+                return;
+
+            accountInput.Select();
+            accountInput.ActivateInputField();
         }
 
         public void SetStatus(string message, bool isError = false)

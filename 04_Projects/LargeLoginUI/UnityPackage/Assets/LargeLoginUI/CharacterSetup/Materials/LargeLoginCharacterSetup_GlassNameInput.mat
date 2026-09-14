@@ -37,7 +37,9 @@ Material:
     - _ColorMask: 15
     - _CornerRadius: 11
     - _Diffraction: 0
-    - _Exposure: 2
+    - _EdgeGlow: 0.52
+    - _EdgeGlowWidth: 5.5
+    - _Exposure: 1.28
     - _Inset: 2
     - _LensPower: 24
     - _LensStrength: 0.076
@@ -49,7 +51,8 @@ Material:
     - _RefractionEdgeWidth: 1
     - _Saturation: 1
     - _ShadowLift: 0.25
-    - _SpriteOverlay: 0.22
+    - _SpecularSheen: 0.16
+    - _SpriteOverlay: 0.1
     - _Stencil: 0
     - _StencilComp: 8
     - _StencilOp: 0
@@ -58,6 +61,7 @@ Material:
     - _TopHighlight: 0.31
     m_Colors:
     - _BorderColor: {r: 0.78, g: 0.72, b: 0.64, a: 0.24}
+    - _EdgeGlowColor: {r: 1.12, g: 0.78, b: 0.46, a: 1}
     - _RectSize: {r: 482, g: 50, b: 0, a: 0}
     - _TintColor: {r: 0.78, g: 0.72, b: 0.64, a: 0.25}
   m_BuildTextureStacks: []

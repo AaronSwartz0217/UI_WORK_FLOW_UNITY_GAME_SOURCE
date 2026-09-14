@@ -26,6 +26,10 @@ Shader "UI/URP Frosted Glass Diffraction"
         _ShadowLift ("Shadow Lift", Range(0, 0.25)) = 0.035
         _TopHighlight ("Top Highlight", Range(0, 1)) = 0.18
         _BottomShade ("Bottom Shade", Range(0, 1)) = 0.08
+        _EdgeGlow ("HDR Edge Glow", Range(0, 4)) = 1.25
+        _EdgeGlowWidth ("Edge Glow Width (Pixels)", Range(1, 48)) = 14
+        [HDR] _EdgeGlowColor ("Edge Glow Color", Color) = (1.35, 0.82, 0.38, 1)
+        _SpecularSheen ("Specular Sheen", Range(0, 2)) = 0.42
         [HideInInspector] _RectSize ("Rect Size", Vector) = (600, 240, 0, 0)
 
         [HideInInspector] _StencilComp ("Stencil Comparison", Float) = 8
@@ -100,6 +104,7 @@ Shader "UI/URP Frosted Glass Diffraction"
                 float4 _MainTex_ST;
                 half4 _TintColor;
                 half4 _BorderColor;
+                half4 _EdgeGlowColor;
                 float4 _RectSize;
                 half _Opacity;
                 half _MaskThreshold;
@@ -122,6 +127,9 @@ Shader "UI/URP Frosted Glass Diffraction"
                 half _ShadowLift;
                 half _TopHighlight;
                 half _BottomShade;
+                half _EdgeGlow;
+                half _EdgeGlowWidth;
+                half _SpecularSheen;
             CBUFFER_END
 
             Varyings Vert(Attributes input)
@@ -252,6 +260,27 @@ Shader "UI/URP Frosted Glass Diffraction"
                 // the sampled background is not blended with itself a second time.
                 glass = lerp(scene, glass, _Opacity);
                 glass = lerp(glass, _BorderColor.rgb, border * _BorderColor.a);
+
+                // The concept artwork contains a luminous glass rim. Emit HDR
+                // energy just inside the silhouette so URP Bloom can spread it
+                // beyond the transparent geometry without adding a hard border.
+                half edgeDistance = max(-sdf, 0.0h);
+                half glowBand = 1.0h - smoothstep(
+                    0.0h,
+                    max(_EdgeGlowWidth, 1.0h),
+                    edgeDistance);
+                half warmRim = glowBand * (0.72h + top * 0.28h);
+                glass += _EdgeGlowColor.rgb *
+                    (_EdgeGlowColor.a * _EdgeGlow * warmRim);
+
+                // A restrained diagonal sheen keeps the surface glossy while
+                // preserving the wireframe-derived tint and background detail.
+                half sheenLine = abs(
+                    (input.uv.y - 0.78h) + (input.uv.x - 0.5h) * 0.12h);
+                half sheen = 1.0h - smoothstep(0.02h, 0.18h, sheenLine);
+                sheen *= smoothstep(0.0h, 0.22h, input.uv.y) *
+                    (1.0h - smoothstep(0.82h, 1.0h, input.uv.y));
+                glass += _EdgeGlowColor.rgb * sheen * _SpecularSheen * 0.28h;
 
                 // Retain the baked PNG's border/gloss artwork as a subtle overlay.
                 half artwork = saturate(bakedSprite.a * _SpriteOverlay);
