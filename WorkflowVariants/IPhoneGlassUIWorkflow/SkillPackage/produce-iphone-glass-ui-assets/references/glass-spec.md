@@ -95,8 +95,10 @@ The URP Shader contains:
 - lens deformation;
 - RGB diffraction;
 - runtime exposure response.
+- final composition that preserves the baked PNG Alpha and multiplies it by uGUI `Image.color.a`.
 
 Do not fake scene refraction by baking a screenshot background into the PNG.
+Do not convert the valid glass mask back to solid output Alpha. The mask controls where the effect exists; the baked PNG Alpha controls how transparent it remains in the scene.
 
 ## 6. QA
 
@@ -111,6 +113,7 @@ Besides the base QA contract, verify:
 - glass interior semi-transparency is intentional and recorded;
 - pixels outside the real silhouette are Alpha `0`;
 - runtime material uses `UI/URP Frosted Glass Diffraction`;
+- runtime Shader output uses source PNG Alpha rather than a solid effect mask;
 - color comparison, checkerboard, 100%, 400%, and reassembly checks pass.
 
 ## 7. Short invocation prompt

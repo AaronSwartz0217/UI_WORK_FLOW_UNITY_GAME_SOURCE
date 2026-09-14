@@ -20,6 +20,7 @@ Status: Pass for component data and Unity integration; manual Game-view screensh
 - [x] 57 formal PNG files enumerated; filenames match real dimensions.
 - [x] True-alpha, checkerboard, 100%, 400%, reassembly, hierarchy, and state-switch QA pass.
 - [x] Component center/safe-area translucency is intentional and lies in the validated 48–96 median Alpha range; normal neutral glass centers are approximately 64/255, matching the first two pages.
+- [x] Runtime Shader preserves baked PNG alpha and uGUI `Image.color.a`; it no longer converts the valid glass mask to solid output alpha.
 - [x] Unity prefab and standalone MainHUD scene generated.
 - [x] Integrated scene validates 2 login inputs, 1 character-name input, 29 buttons, 37 glass panels, 0 added soft-glow objects, and exactly 1 EventSystem.
 - [x] `CharacterSelectionScreen/EnterGameButton` reference is serialized to `LoginToCharacterFlowController`.

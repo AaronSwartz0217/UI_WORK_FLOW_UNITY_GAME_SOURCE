@@ -111,8 +111,15 @@ def main() -> None:
     shader_path = unity_project / "Assets" / "URPFrostedGlass" / "URPFrostedGlassUI.shader"
     if not shader_path.is_file():
         errors.append("missing URP glass shader source: Assets/URPFrostedGlass/URPFrostedGlassUI.shader")
-    elif RUNTIME_SHADER not in shader_path.read_text(encoding="utf-8"):
-        errors.append(f"URP shader does not declare {RUNTIME_SHADER}")
+    else:
+        shader_source = shader_path.read_text(encoding="utf-8")
+        if RUNTIME_SHADER not in shader_source:
+            errors.append(f"URP shader does not declare {RUNTIME_SHADER}")
+        if "half sourceAlpha = saturate(bakedSprite.a);" not in shader_source or \
+                "effectMask * sourceAlpha * input.color.a" not in shader_source:
+            errors.append("URP glass shader must preserve source PNG alpha and uGUI Image color alpha")
+        if "half alpha = effectMask * input.color.a;" in shader_source:
+            errors.append("URP glass shader still forces the valid glass mask to solid alpha")
 
     color_map_rel = glass.get("colorMap", "")
     color_map_path = project / color_map_rel if is_relative_portable(color_map_rel) else project / "__invalid__"

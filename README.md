@@ -113,6 +113,7 @@ python SkillPackage/produce-game-ui-assets/scripts/validate_project.py --project
 - 可输入的登录页、角色选择页与 `EnterGameButton` 到主界面 HUD 的跳转；
 - 57 个主界面透明组件，其中 13 个道具栏槽位具有 `Normal / Hover / Pressed / Disabled / Selected` 状态；
 - 登录、角色选择、主界面按钮及道具栏的玻璃中部透明度统一为约 `64/255`；
+- 运行时玻璃 Shader 保留 PNG 源 Alpha，并乘以 uGUI `Image.color.a`，避免场景中重新变成实心；
 - 主界面不创建全屏蓝色背景，中央保持透明，供后续 3D 场景显示；
 - 输入框、按钮、状态接口、颜色对照、回拼和两轮 QA；
 - Unity CLI 构建与结构验证记录。

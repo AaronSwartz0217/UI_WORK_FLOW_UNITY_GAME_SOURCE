@@ -36,6 +36,7 @@ Status: unity_integrated_manual_screenshot_pending
 - The full-screen blue field is not an asset. The formal HUD overlay uses alpha 0 so the future 3D gameplay camera remains visible.
 - Only the lower HUD plate and individual controls retain translucent glass surfaces.
 - Glass buttons and slots intentionally keep a median safe-area alpha around 64/255, matching the first two pages so the runtime shader can refract and blur the game view. Colored health, mana, loading, mutation, and warning fills remain substantially opaque for readability.
+- Runtime glass composition preserves each PNG's source alpha and multiplies it by uGUI `Image.color.a`; the shader effect mask must not make the panel solid again.
 
 ## Proportion
 

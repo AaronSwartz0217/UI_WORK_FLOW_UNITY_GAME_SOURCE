@@ -247,9 +247,9 @@ Shader "UI/URP Frosted Glass Diffraction"
                 half innerEdge = 1.0h - smoothstep(0.0h, max(_CornerRadius * 0.65h, 1.0h), -sdf);
                 glass += top * innerEdge * _TopHighlight;
                 glass *= 1.0h - bottom * innerEdge * _BottomShade;
-                // The effect strength blends processed and original scene color
-                // inside the shader. Output alpha remains solid within the mask so
-                // the sampled background is not blended with itself a second time.
+                // The effect strength controls how much refraction and blur are
+                // mixed into the sampled scene. Final compositing alpha is kept
+                // separate so the source PNG remains genuinely translucent.
                 glass = lerp(scene, glass, _Opacity);
                 glass = lerp(glass, _BorderColor.rgb, border * _BorderColor.a);
 
@@ -257,7 +257,8 @@ Shader "UI/URP Frosted Glass Diffraction"
                 half artwork = saturate(bakedSprite.a * _SpriteOverlay);
                 glass = lerp(glass, bakedSprite.rgb, artwork);
 
-                half alpha = effectMask * input.color.a;
+                half sourceAlpha = saturate(bakedSprite.a);
+                half alpha = effectMask * sourceAlpha * input.color.a;
                 return half4(glass * input.color.rgb, alpha);
             }
             ENDHLSL
