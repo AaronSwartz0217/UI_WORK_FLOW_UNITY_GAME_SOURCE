@@ -1,0 +1,24 @@
+# Proportion Loop 01
+
+- Whiteframe whole image: `in/MainHUD_Wireframe_1559x880.jpg`.
+- Whiteframe actual UI bounds: full 1559x880 canvas.
+- Whiteframe actual UI ratio: 1.771591.
+- Raw generated canvas: 1670x942.
+- Raw generated ratio: 1.772824.
+- Ratio deviation: 0.0696%.
+- Formal review canvas: 1559x880.
+- Conversion: uniform scale by 0.934183 to 1559.66x880, then symmetric horizontal crop of approximately 0.33 px per side.
+- ScaleX: 0.934183.
+- ScaleY: 0.934183.
+- Squares visually square: Pass.
+- Rounded controls visually undistorted: Pass.
+- Border treatment: no closed outline; edges use low-contrast transparency falloff.
+- Layout authority: wireframe; material reference cannot move or resize HUD regions.
+- Corrected review overlay: 1559x880 with all principal bounds reconstructed from the whiteframe.
+- Player health track: 406x20.
+- Loading track: 405x18.
+- Mutation track: 566x17.
+- Health/mana track: 646x21.
+- Hotbar slot family: 56x56.
+- Full-screen background: alpha 0; only the lower HUD plate remains translucent.
+- Result: corrected full-page draft awaiting user approval; component splitting remains gated.

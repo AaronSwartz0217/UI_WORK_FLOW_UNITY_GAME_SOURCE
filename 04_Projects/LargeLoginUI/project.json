@@ -27,7 +27,8 @@
   "unityPackage": "UnityPackage/Assets",
   "screens": {
     "loginScreen": "UnityPackage/Assets/LargeLoginUI/LoginScreen",
-    "characterSetup": "UnityPackage/Assets/LargeLoginUI/CharacterSetup"
+    "characterSetup": "UnityPackage/Assets/LargeLoginUI/CharacterSetup",
+    "mainHud": "UnityPackage/Assets/MainHUDUI"
   },
   "screenProduction": {
     "loginScreen": {
@@ -50,6 +51,8 @@
   "glassShowcaseScene": "UnityPackage/Assets/UI场景测试/Scenes/UI场景测试.unity",
   "glassShowcaseBuilder": "UnityPackage/Assets/Editor/UISceneTestProjectBuilder.cs",
   "loginCharacterFlowScene": "UnityPackage/Assets/UI场景测试/Scenes/LoginCharacterFlow.unity",
+  "mainHudPrefab": "UnityPackage/Assets/MainHUDUI/Prefabs/MainHUD.prefab",
+  "mainHudScene": "UnityPackage/Assets/UI场景测试/Scenes/MainHUD.unity",
   "loginCharacterFlowBuilder": "UnityPackage/Assets/Editor/LoginCharacterFlowBuilder.cs",
   "loginCharacterFlowController": "UnityPackage/Assets/UI场景测试/Scripts/LoginToCharacterFlowController.cs",
   "runtimeCjkFont": "UnityPackage/Assets/LargeLoginUI/Shared/Fonts/SourceHanSansSC-DynamicSDF.asset",
@@ -57,12 +60,16 @@
   "runtimeValidation": {
     "loginInputs": 2,
     "characterInputs": 1,
-    "buttons": 8,
-    "glassPanels": 13,
+    "buttons": 29,
+    "glassPanels": 37,
     "softGlowLayers": 0,
     "eventSystems": 1,
     "hdr": true,
     "bloom": true,
+    "navigation": "LoginScreen -> CharacterSelectionScreen -> MainHUDScreen",
+    "enterGameBinding": "CharacterSelectionScreen/EnterGameButton -> MainHUDScreen",
+    "mainHudBackground": "transparent for future 3D scene",
+    "mainHudGlassCenterAlpha": 64,
     "visualScreenshotApproval": "manual"
   },
   "requiresFullUIApproval": true,

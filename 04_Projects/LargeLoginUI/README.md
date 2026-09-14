@@ -4,7 +4,7 @@
 
 这是独立于旧 Cook、装备鉴定和工业风共享模板的新登录界面项目。登录白模决定布局与黑金色倾向，用户确认的完整稿决定材质观感，`毛玻璃.json` 决定实时折射、模糊、透明、曝光与高光参数。
 
-所有 PNG 均不包含文字。账号、密码、角色名称、装备名称、状态、登录、注册、进入游戏和底部提示全部由 Unity TextMeshPro 渲染。
+所有普通文字均由 Unity TextMeshPro 渲染。登录、角色选择和主界面现已组成同一测试流程；主界面玻璃与前两页的中心透明度同步为约 64/255。
 
 ## 输入与视觉依据
 
@@ -43,6 +43,9 @@ Unity 内容位于：
 - 角色创建预制体：`UnityPackage/Assets/LargeLoginUI/CharacterSetup/Prefabs/LargeLoginCharacterSetup.prefab`
 - 角色创建预览场景：`UnityPackage/Assets/LargeLoginUI/CharacterSetup/Scenes/LargeLoginCharacterSetupPreview.unity`
 - 角色创建重建工具：`UnityPackage/Assets/LargeLoginUI/CharacterSetup/Editor/LargeLoginCharacterSetupPrefabBuilder.cs`
+- 主界面预制体：`UnityPackage/Assets/MainHUDUI/Prefabs/MainHUD.prefab`
+- 主界面独立场景：`UnityPackage/Assets/UI场景测试/Scenes/MainHUD.unity`
+- 三页流程场景：`UnityPackage/Assets/UI场景测试/Scenes/LoginCharacterFlow.unity`
 - 实时 Shader：`UnityPackage/Assets/URPFrostedGlass/URPFrostedGlassUI.shader`
 - 登录版式重建工具：`UnityPackage/Assets/LargeLoginUI/LoginScreen/Editor/LargeLoginPrefabBuilder.cs`
 
@@ -52,8 +55,9 @@ Unity 内容位于：
 
 - `Tools > Large Login UI > Login Screen > Rebuild`
 - `Tools > Large Login UI > Character Setup > Rebuild`
+- `Tools > UI Scene Test > Rebuild Login To Character Flow`
 
-两个版式使用不同的图片文件名、组件目录和预制体目录。重建工具会读取固定预设、生成透明组件、创建材质与预制体，并打开 URP Opaque Texture。登录验证、账号存储和场景切换不在本 UI 包内；`LargeLoginScreenView` 只提供登录/注册事件和状态文本接口。
+三个版式使用不同的图片文件名、组件目录和预制体目录。重建工具会读取固定预设、生成透明组件、创建材质与预制体，并打开 URP Opaque Texture。测试控制器支持任意非空账号密码的模拟登录，随后进入角色选择；角色页的 `EnterGameButton` 再切换到透明主界面。真实账号验证与账号存储仍由后续业务服务接入。
 
 发布前请给 TMP 配置项目自己的中文字体与 fallback 链。PNG 中没有烘焙字体。
 
@@ -64,6 +68,8 @@ Unity 内容位于：
 - Unity CLI 构建：通过
 - 登录 Prefab：2 个 TMP 输入框、2 个按钮、4 个实时毛玻璃面板
 - 角色创建 Prefab：1 个 TMP 输入框、6 个按钮、9 个实时毛玻璃面板
-- 每个预览场景：恰好 1 个 EventSystem；两个可移植 Prefab 均不内嵌 EventSystem
+- 主界面 Prefab：21 个按钮、24 个实时毛玻璃面板、无全屏背景；13 个道具栏槽位中心 Alpha 约 64/255
+- 三页流程场景：2 个登录输入框、1 个角色名输入框、29 个按钮、37 个实时毛玻璃面板、0 个额外 SoftGlow、恰好 1 个 EventSystem
+- 运行顺序：`LoginScreen -> CharacterSelectionScreen -> MainHUDScreen`
 - 按钮状态族：相同尺寸、相同 alpha 轮廓
 - 正式目录：仅 PNG

@@ -4,11 +4,11 @@
 
 ## 当前结果
 
-截至 2026-08-28：
+截至 2026-09-14：
 
-- 项目：9 个
-- 验证通过：9 个
-- 正式 PNG：182 个
+- 项目：11 个
+- 验证通过：11 个（主界面的最终 Game 视图截屏由用户复核）
+- 正式 PNG：258 个
 - `DesktopUIWireframes` 白膜：8/8 已处理
 - Cook 为第一风格标准；Equipment Identification 只补充 Cook 未覆盖的按钮或槽位类型
 - 普通文字、动态数字和本地化内容不写入图片；`X`、`?`、`+`、`-`、箭头等功能符号按需保留
@@ -103,14 +103,26 @@ python SkillPackage/produce-game-ui-assets/scripts/validate_project.py --project
 
 该分支也包含外部 [`UNITY_FIGHTCHRACTER_FLOW_PLUGIN`](https://github.com/AaronSwartz0217/UNITY_FIGHTCHRACTER_FLOW_PLUGIN) 的兼容契约与只读检查器。插件库存继续保存在原插件仓库，本仓库不复制 `Packages/`；动画重定向、刚性装备挂点、换装/蒙皮绑骨和 Animator 套动作的能力边界及运行时验收标准见毛玻璃变体说明。
 
-## 登录界面毛玻璃示例
+## 登录、角色选择与主界面毛玻璃示例
 
-[`04_Projects/LargeLoginUI`](04_Projects/LargeLoginUI/README.md) 是当前变体的可复用登录界面实现。它不依赖 Cook、装备鉴定或旧工业模板，包含：
+[`04_Projects/LargeLoginUI`](04_Projects/LargeLoginUI/README.md) 与 [`04_Projects/MainHUDUI`](04_Projects/MainHUDUI/README.md) 组成当前变体的三页可运行示例。它不依赖 Cook、装备鉴定或旧工业模板，包含：
 
-- 登录白模与用户确认稿的相对路径记录；
+- 登录、角色选择和主界面的白模与用户确认稿记录；
 - 无文字 PNG 的组件清单和按钮四态契约；
-- Unity 2022.3 URP 的可重建 uGUI/TMP 预制体、预览场景和毛玻璃材质；
-- 输入框、按钮、状态接口、颜色对照、回拼和最终 QA；
+- Unity 2022.3 URP 的可重建 uGUI/TMP 预制体、独立场景、三页流程场景和毛玻璃材质；
+- 可输入的登录页、角色选择页与 `EnterGameButton` 到主界面 HUD 的跳转；
+- 57 个主界面透明组件，其中 13 个道具栏槽位具有 `Normal / Hover / Pressed / Disabled / Selected` 状态；
+- 登录、角色选择、主界面按钮及道具栏的玻璃中部透明度统一为约 `64/255`；
+- 主界面不创建全屏蓝色背景，中央保持透明，供后续 3D 场景显示；
+- 输入框、按钮、状态接口、颜色对照、回拼和两轮 QA；
 - Unity CLI 构建与结构验证记录。
+
+三页运行顺序为：
+
+```text
+LoginScreen -> CharacterSelectionScreen -> MainHUDScreen
+```
+
+当前集成场景验证为 2 个登录输入框、1 个角色名称输入框、29 个按钮、37 个实时玻璃面板、0 个额外 SoftGlow 和 1 个 EventSystem。Bloom 已收敛为低强度配置，组件不烘焙辉光或硬描边。
 
 仓库继续遵守图片资源排除策略：Git 保存预制体、材质、Shader、脚本、配置和说明，PNG/JPG 只保留在本地工作文件夹。

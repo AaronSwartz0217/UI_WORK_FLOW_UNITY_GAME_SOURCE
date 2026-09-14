@@ -1,0 +1,86 @@
+{
+  "projectDisplayName": "主界面 HUD",
+  "projectId": "MainHUDUI",
+  "componentPrefix": "MainHUD",
+  "workflowVariant": "IPhoneGlassUIWorkflow",
+  "status": "unity_integrated_manual_screenshot_pending",
+  "wireframe": "in/MainHUD_Wireframe_1559x880.jpg",
+  "styleReferences": [
+    "in/MainHUD_GlassStyleReference_1670x942.png",
+    "in/MainHUD_CurrentGlassMaterialReference_1464x828.png",
+    "in/MainHUD_FrostedGlassPreset.json"
+  ],
+  "visualAuthority": {
+    "layoutAndColor": "in/MainHUD_Wireframe_1559x880.jpg",
+    "materialOnly": "in/MainHUD_GlassStyleReference_1670x942.png",
+    "noOutline": true,
+    "excludedLegacyTemplates": [
+      "Cook",
+      "Equipment identification",
+      "legacy shared black-steel and amber components"
+    ]
+  },
+  "canvas": {
+    "width": 1559,
+    "height": 880,
+    "scaleX": 1.0,
+    "scaleY": 1.0
+  },
+  "panelSelectionMode": "ExplicitOnly",
+  "selectedPanelIds": [
+    "HUD01",
+    "BTN01",
+    "BTN02",
+    "BTN03",
+    "BTN04",
+    "BTN05",
+    "BTN06",
+    "BTN07",
+    "SLOT01"
+  ],
+  "pendingPanelIds": [
+    "BTN08"
+  ],
+  "excludedPanelIds": [
+    "POPUP01",
+    "RANKING01"
+  ],
+  "textPolicy": {
+    "localizedAndDynamic": "TMP",
+    "functionalSymbols": "retain",
+    "bakedText": false
+  },
+  "formalOutput": "Components/out/MainHUDUI",
+  "visualStyleMaster": "FullUI/MainHUD_FullUI_Draft_1559x880.png",
+  "fullUIDraft": "FullUI/MainHUD_FullUI_TransparentOverlay_1559x880.png",
+  "transparentCheckerboard": "QA/MainHUD_TransparentCheckerboard_1559x880.png",
+  "visualStyleApproved": true,
+  "componentExport": {
+    "path": "Components/out/MainHUDUI",
+    "pngCount": 57,
+    "glassSurfaceAlpha": "center approximately 64/255, synchronized with login and character screens",
+    "functionalFills": "opaque for readability",
+    "buttonFamilies": 9,
+    "buttonStatePolicy": "Normal/Hover/Pressed/Disabled; Hotbar also has Selected",
+    "qaCheckerboard": "QA/MainHUD_AlphaCheckerboard_1559x880.png",
+    "statePreview": "QA/MainHUD_ButtonStates.png",
+    "reassemblyPreview": "into/ReassemblyPreview/MainHUD_Reassembly_NoText_1559x880.png"
+  },
+  "unityIntegration": {
+    "targetProject": "UI场景测试",
+    "prefab": "Assets/MainHUDUI/Prefabs/MainHUD.prefab",
+    "standaloneScene": "Assets/UI场景测试/Scenes/MainHUD.unity",
+    "integratedScene": "Assets/UI场景测试/Scenes/LoginCharacterFlow.unity",
+    "flow": "Login -> Character Selection -> Main HUD",
+    "enterGameBinding": "CharacterSelectionScreen/EnterGameButton -> LoginToCharacterFlowController.NotifyEnterGameSucceeded",
+    "buildValidation": "Pass",
+    "gameplayBackground": "future 3D camera scene supplied by user",
+    "fullScreenBlueBackground": false
+  },
+  "requiresFullUIApproval": true,
+  "fullUIApproved": true,
+  "requiresFourButtonStates": true,
+  "requiresTrueAlpha": true,
+  "requiresReassembly": true,
+  "requiresFinalQA": true
+}
